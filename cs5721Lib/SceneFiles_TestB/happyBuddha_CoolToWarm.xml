@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>1.0 1.0 1.0</bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>0 4.0 8.0</position>
+    <viewDir>0.0 -0.8 -3.0</viewDir>
+    <focalLength>0.80</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="area">
+    <position>6.0 6.0 8.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+    <width>2.0</width>
+    <length>2.0</length>
+    <normal>0 -1 0</normal>
+  </light>
+
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0.4 0.4 1.0</diffuse>
+  </shader>
+  <shader name="gooch" type="CoolToWarm">
+    <diffuse>0.8 0.2 0.2</diffuse>
+  </shader>
+
+  <instance name="buddha" type="mesh">
+    <file>objFiles/buddha.obj</file>
+    <shader ref="gooch"/>
+  </instance>
+
+  <shape name="b1" type="instance" id="buddha">
+    <attribute>wireframe</attribute>
+    <transform name="xform1">
+      <translate>0 2 1</translate>
+      <scale>2 2 2</scale> 
+      <rotate axis="X">-90</rotate>
+<!--      <rotate axis="Y">120</rotate>
+      <rotate axis="Z">90</rotate> -->
+    </transform>
+  </shape> 
+
+</scene>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene bgColor="0.5 0.5 0.5">
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 1.5 0.0</position>
+    <lookatPoint>0.0 1.5 -1.0</lookatPoint>
+    <focalLength>0.50</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="point">
+    <position>0.0 10.0 4.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0.4 0.4 1.0</diffuse>
+  </shader>
+  <instance name="eggBase" type="sphere">
+    <shader ref="blueMat"/>
+    <center>0.0 0.0 0.0</center>
+    <radius>1.0</radius>
+  </instance>
+
+  <!-- Instanced Spheres - three of them with different shaders -->
+  <shader name="greenBlinnPhong" type="BlinnPhong">
+    <diffuse>0.2 0.8 0.2</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>128.0</phongExp>
+  </shader>
+
+  <shape name="midellipsoid" type="instance" id="eggBase">
+    <shader ref="greenBlinnPhong"/>
+    <transform name="xform1">
+      <translate>0.0 1.5 -4.0</translate>
+      <scale>0.5 1.5 1.0</scale>
+    </transform>
+  </shape>
+
+</scene>

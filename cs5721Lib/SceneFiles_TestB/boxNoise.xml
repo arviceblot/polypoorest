@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.7</bgColor>
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 8.0 15.0</position>
+    <lookatPoint>0 0 0</lookatPoint>
+    <focalLength>0.35</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- -->
+  <!-- Lights -->
+  <!-- -->
+  <light type="area">
+    <position>10.0 9.5 10.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+    <normal>0.0 0.0 -1.0</normal>
+    <width>5</width>
+    <length>5</length>
+  </light>
+
+  <!-- Textures -->
+  <texture name="perlinNoise" type="PerlinNoise">
+  </texture>
+
+  <shader name="pNoise" type="Lambertian">
+    <diffuse tex="perlinNoise">1.0 1.0 1.0</diffuse>
+  </shader>
+
+  <shape name="noisyBox" type="box">
+    <shader ref="pNoise"/>
+    <minPt>-4.0 -4.0 -4.0</minPt>
+    <maxPt>4.0 4.0 4.0</maxPt>
+  </shape>
+
+</scene>

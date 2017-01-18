@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.8706 0.7529 0.7137</bgColor>
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+
+<!-- Top down view -->
+<!--    <position>6000 7000 3200</position>
+    <lookatPoint>6001 5829.69 3201</lookatPoint> -->
+    <position>7400 3850 2300</position>
+    <lookatPoint>10000 3700.0 6800</lookatPoint> -->
+    <focalLength>0.25</focalLength>
+    <imagePlaneWidth>0.8</imagePlaneWidth>
+  </camera>
+
+<!--  <light type="point">
+    <position>0.0 3000.0 4.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light> -->
+
+
+  <light type="point">
+    <position>4000.0 8000.0 800.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <texture name="textureTest" type="image">
+    <sourcefile>images/textureMapCalibration.png</sourcefile>
+  </texture>
+
+  <texture name="MarsSurfaceTexture" type="jp2">
+    <sourcefile>images/PSP_003910_1685_RED_C_01_ORTHO.JP2</sourcefile>
+  </texture>
+
+  <shader name="textureTest" type="Lambertian">
+    <diffuse tex="textureExample">1.0 1.0 1.0</diffuse>
+  </shader>
+
+  <shader name="redMat" type="Lambertian">
+    <diffuse tex="MarsSurfaceTexture">0.7765 0.49 0.2941</diffuse>
+  </shader>
+
+  <shape name="MarsTest" type="dte">
+    <shader ref="redMat"/>
+  </shape>
+
+</scene>

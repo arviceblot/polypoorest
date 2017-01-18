@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.7</bgColor>
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>8 4.0 15.0</position>
+    <lookatPoint>0 0 0</lookatPoint>
+    <focalLength>0.35</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- -->
+  <!-- Lights -->
+  <!-- -->
+  <light type="point">
+    <position>10.0 9.5 10.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <light type="point">
+    <position>0.0 9.5 10.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Textures -->
+  <texture name="textureExample" type="image">
+    <sourcefile>images/textureMapCalibration.png</sourcefile>
+  </texture>
+
+  <shader name="textureTest" type="Lambertian">
+    <diffuse tex="textureExample">1.0 1.0 1.0</diffuse>
+  </shader>
+
+  <shape name="s1" type="sphere">
+    <shader ref="textureTest"/>
+    <center>0.0 0.0 0.0</center>
+    <radius>8.0</radius>
+  </shape>
+
+</scene>

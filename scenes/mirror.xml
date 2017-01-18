@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This scene contains a single box, shaded with a blue lambertian
+     shader, one point light source. -->
+
+<scene>
+  <!-- Simple camera placed back from the origin looking in -Z
+       direction -->
+  <camera name="main" type="perspective">
+    <position>0 0 4</position>
+    <viewDir>0 0 -1</viewDir>
+    <focalLength>1.0</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- Basic point light source placed just above the camera. -->
+  <light type="point">
+    <position>0 4 4</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Lambertian Shader -->
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0 0 1</diffuse>
+  </shader>
+
+  <shader name="redMat" type="Lambertian">
+    <diffuse>1 0 0</diffuse>
+  </shader>
+
+  <shader name="mirrorMat" type="Mirror"/>
+
+  <!-- Box placed just at the origin. -->
+  <shape name="box1" type="box">
+    <shader ref="mirrorMat" />
+    <minPt>-1 -1 -0.5</minPt>
+    <maxPt>1 1 0.5</maxPt>
+  </shape>
+
+  <shape name="box2" type="box">
+    <shader ref="mirrorMat" />
+    <minPt>-1 -1 5</minPt>
+    <maxPt>1 1 6</maxPt>
+  </shape>
+
+  <shape name="box3" type="box">
+    <shader ref="mirrorMat" />
+    <minPt>-1.5 -1 0.5</minPt>
+    <maxPt>-1 1 5</maxPt>
+  </shape>
+
+  <shape name="box4" type="box">
+    <shader ref="mirrorMat" />
+    <minPt>1 -1 0.5</minPt>
+    <maxPt>1.5 1 5</maxPt>
+  </shape>
+
+  <!-- Sphere -->
+  <shape name="leftsphere" type="sphere">
+    <shader ref="redMat"/>
+    <center>-0.5 0 2.5</center>
+    <radius>0.15</radius>
+  </shape>
+
+  <!-- Sphere -->
+  <shape name="rightsphere" type="sphere">
+    <shader ref="blueMat"/>
+    <center>0.5 0 2.5</center>
+    <radius>0.15</radius>
+  </shape>
+
+</scene>

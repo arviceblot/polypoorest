@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This test scene provides a simple perspective camer in the
+     default camera position and orientation.  It contains a point
+     light source with a single blue, Lambertian sphere in front of
+     the camera. -->
+
+<scene>
+  <!-- Simple camera placed back from the origin looking in -Z
+       direction -->
+  <camera name="main" type="perspective">
+    <position>0 0 0</position>
+    <viewDir>0 0 -1</viewDir>
+    <focalLength>1.0</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- Basic point light source placed just to the left and slightly
+       above the camera. This will generate shadows on the
+       triangles. -->
+  <light type="point">
+    <position>-1 1 0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Shaders -->
+  <shader name="red" type="Lambertian">
+    <diffuse>1 0 0</diffuse>
+  </shader>
+  <shader name="green" type="Lambertian">
+    <diffuse>0 1 0</diffuse>
+  </shader>
+  <shader name="blue" type="Lambertian">
+    <diffuse>0 0 1</diffuse>
+  </shader>
+
+  <!-- Sphere placed just above the ground using the blue Lambertian
+       shader. -->
+  <shape name="triangle1" type="triangle">
+    <shader ref="red" />
+    <v0>-1.2 -0.2 -7</v0>
+    <v1>0.8 -0.5 -5</v1>
+    <v2>0.9 0 -5</v2>
+  </shape>
+
+  <shape name="triangle2" type="triangle">
+    <shader ref="green" />
+    <v0>0.773205 -0.93923 -7</v0>
+    <v1>0.0330127 0.94282 -5</v1>
+    <v2>-0.45 0.779423 -5</v2>
+  </shape>
+
+  <shape name="triangle3" type="triangle">
+    <shader ref="blue" />
+    <v0>0.426795 1.13923 -7</v0>
+    <v1>-0.833013 -0.44282 -5</v1>
+    <v2>-0.45 -0.779423 -5</v2>
+  </shape>
+
+</scene>

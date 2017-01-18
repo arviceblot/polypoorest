@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.6</bgColor>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>-5 2.0 4.0</position>
+    <lookatPoint>0.0 0.3 0.0</lookatPoint>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- Basic point light source placed just above the camera. -->
+  <light type="point">
+    <position>0 10 0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <texture name="calibrationTex" type="image">
+    <sourcefile>images/textureMapCalibration.png</sourcefile>
+  </texture>
+  <shader name="greyTextured" type="Lambertian">
+    <diffuse tex="calibrationTex">1.0 1.0 1.0</diffuse>
+  </shader>
+  <shape name="ground" type="box">
+    <shader ref="greyTextured" />
+    <minPt>-10.0 -0.5 -10.0</minPt>
+    <maxPt>10.0 0.0 10.0</maxPt>
+  </shape>
+
+  <shape name="backwall" type="box">
+    <shader ref="greyTextured" />
+    <minPt>-10.0 0.0 -10.5</minPt>
+    <maxPt>10.0 20.0 -10.0</maxPt>
+  </shape>
+
+  <shader name="coloredGlass" type="Dielectric">
+    <refractiveIndex>1.51</refractiveIndex>
+    <attenuationCoef>0.9999 0.90 0.9999</attenuationCoef>
+  </shader>
+
+  <shape name="sphere2" type="sphere">
+    <shader ref="coloredGlass" />
+    <center>0 2.0 -1</center>
+    <radius>1.8</radius>
+  </shape>
+
+  <shader name="cyanMat" type="Lambertian">
+    <diffuse>0.0 1.0 1.0</diffuse>
+  </shader>
+  <shader name="yellowMat" type="Lambertian">
+    <diffuse>1.0 1.0 0.0</diffuse>
+  </shader>
+  <shader name="magentaMat" type="Lambertian">
+    <diffuse>1.0 0.0 1.0</diffuse>
+  </shader>
+  <shape name="fsphere" type="sphere">
+    <shader ref="magentaMat"/>
+    <center>0 1 4</center>
+    <radius>0.5</radius>
+  </shape>
+  <shape name="bsphere" type="sphere">
+    <shader ref="yellowMat"/>
+    <center>0 1 -4</center>
+    <radius>0.5</radius>
+  </shape>
+  <shape name="rsphere" type="sphere">
+    <shader ref="cyanMat"/>
+    <center>4 1 0</center>
+    <radius>0.5</radius>
+  </shape>
+  <shape name="lsphere" type="sphere">
+    <shader ref="cyanMat"/>
+    <center>-4 1 0</center>
+    <radius>0.5</radius>
+  </shape>
+
+</scene>

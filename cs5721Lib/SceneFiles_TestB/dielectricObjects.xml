@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.6</bgColor>
+    <envMapPrefix>data/reef_</envMapPrefix>
+  </sceneParameters>
+
+  <camera name="main" type="perspective">
+    <position>0 4.0 8.0</position>
+    <lookatPoint>0.0 0.3 0.0</lookatPoint>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- Basic point light source placed just above the camera. -->
+  <light type="point">
+    <position>0 10 0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <texture name="calibrationTex" type="image">
+    <sourcefile>images/textureMapCalibration.png</sourcefile>
+  </texture>
+  <shader name="greyTextured" type="Lambertian">
+    <diffuse tex="calibrationTex">1.0 1.0 1.0</diffuse>
+  </shader>
+  <shape name="ground" type="box">
+    <shader ref="greyTextured" />
+    <minPt>-10.0 -0.5 -10.0</minPt>
+    <maxPt>10.0 0.0 10.0</maxPt>
+  </shape>
+
+  <shape name="backwall" type="box">
+    <shader ref="greyTextured" />
+    <minPt>-10.0 0.0 -10.5</minPt>
+    <maxPt>10.0 20.0 -10.0</maxPt>
+  </shape>
+
+  <shader name="coloredGlass" type="Dielectric">
+    <refractiveIndex>1.01</refractiveIndex>
+<!--    <attenuationCoef>0.999999 0.9998 0.999999</attenuationCoef> -->
+  </shader>
+
+  <shader name="greyMat" type="Lambertian">
+    <diffuse>0.5 0.5 0.5</diffuse>
+  </shader>
+  <instance name="buddhaModel" type="mesh">
+    <file>objFiles/buddha.obj</file>
+    <shader ref="greyMat"/>
+  </instance> 
+  <shape name="b1" type="instance" id="buddhaModel">
+    <shader ref="coloredGlass"/>
+    <transform name="xform1">
+      <translate>0 2 4</translate>
+      <scale>2 2 2</scale> 
+      <rotate axis="X">-90</rotate>
+    </transform>
+  </shape> 
+
+  <instance name="eggBase" type="sphere">
+    <shader ref="greyMat"/>
+    <center>0.0 0.0 0.0</center>
+    <radius>1.0</radius>
+  </instance>
+  <shape name="egg" type="instance" id="eggBase">
+    <shader ref="coloredGlass"/>
+    <transform name="xform1">
+      <translate>2.0 2.0 0.0</translate>
+      <scale>1.0 1.0 1.8</scale>
+    </transform>
+  </shape>
+
+  <instance name="AABox" type="box">
+    <shader ref="greyMat" />
+    <minPt>-0.5 -0.5 -0.5</minPt>
+    <maxPt>0.5 0.5 0.5</maxPt>
+  </instance>
+  <shape name="box1" type="instance" id="AABox">
+    <shader ref="coloredGlass"/>
+    <transform name="xform1">
+      <translate>-2.0 2.0 0.0</translate>
+      <scale>1.0 2.0 1.5</scale>
+      <rotate axis="Y">50.0</rotate>
+    </transform>
+  </shape>
+
+</scene>

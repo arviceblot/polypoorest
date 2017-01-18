@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Comments can be embedded as well. -->
+<scene>
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 0.0 3.0</position>
+    <viewDir>0 0.0 -1.0</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="point">
+    <position>-5.0 2.0 3.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <shader name="redBlinnPhong" type="BlinnPhong">
+    <diffuse>1 0.2 0.2</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>8.0</phongExp>
+  </shader>
+
+  <shader name="redPhong" type="Phong">
+    <diffuse>1 0 0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>8.0</phongExp>
+  </shader>
+
+
+  <shader name="redBlinnPhong2" type="BlinnPhong">
+    <diffuse>1 0.2 0.2</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>32.0</phongExp>
+  </shader>
+
+  <shader name="redPhong2" type="Phong">
+    <diffuse>1 0 0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>32.0</phongExp>
+  </shader>
+
+  <!-- Sphere -->
+  <shape name="leftsphere" type="sphere">
+    <shader ref="redBlinnPhong"/>
+    <center>-1.4 1.2 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <!-- Sphere -->
+  <shape name="rightsphere" type="sphere">
+    <shader ref="redPhong"/>
+    <center>1.4 1.2 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <shape name="leftsphere" type="sphere">
+    <shader ref="redBlinnPhong2"/>
+    <center>-1.4 -1.2 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <!-- Sphere -->
+  <shape name="rightsphere" type="sphere">
+    <shader ref="redPhong2"/>
+    <center>1.4 -1.2 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+</scene>

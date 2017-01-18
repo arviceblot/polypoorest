@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.7</bgColor>
+    <envMapPrefix>images/reef_</envMapPrefix>
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 8.0 15.0</position>
+    <lookatPoint>0 0 0</lookatPoint>
+    <focalLength>0.35</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- -->
+  <!-- Lights -->
+  <!-- -->
+  <light type="point">
+    <position>0.0 50.0 0.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Lambertian Shaders -->
+  <shader name="redMat" type="Lambertian">
+    <diffuse>1 0 0</diffuse>
+  </shader>
+  <shader name="greenMat" type="Lambertian">
+    <diffuse>0 1 0</diffuse>
+  </shader>
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0 0 1</diffuse>
+  </shader>
+  <shader name="yellowMat" type="Lambertian">
+    <diffuse>1 1 0</diffuse>
+  </shader>
+  <shader name="cyanMat" type="Lambertian">
+    <diffuse>0 1 1</diffuse>
+  </shader>
+  <shader name="magentaMat" type="Lambertian">
+    <diffuse>1 0 1</diffuse>
+  </shader>
+
+  <shader name="mirror" type="Mirror"/>
+
+  <!-- Textures -->
+  <texture name="calibrationTex" type="image">
+    <sourcefile>images/textureMapCalibration.png</sourcefile>
+  </texture>
+
+  <shader name="greyTextured" type="Lambertian">
+    <diffuse tex="calibrationTex">1.0 1.0 1.0</diffuse>
+  </shader>
+
+  <!-- Various Objects with different shaders -->
+
+  <shape name="mirrorSphere" type="sphere">
+    <shader ref="mirror"/>
+    <center>0.0 5.0 0.0</center>
+    <radius>3.0</radius>
+  </shape>
+
+  <shape name="s1" type="sphere">
+    <shader ref="blueMat"/>
+    <center>-5.0 1.5 5.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <shape name="s2" type="sphere">
+    <shader ref="greenMat"/>
+    <center>5.0 1.5 5.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <shape name="s3" type="sphere">
+    <shader ref="redMat"/>
+    <center>-5.0 1.5 -5.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <shape name="s3" type="sphere">
+    <shader ref="yellowMat"/>
+    <center>5.0 1.5 -5.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+  <shape name="ground" type="box">
+    <shader ref="greyTextured" />
+    <minPt>-10.0 -0.5 -10.0</minPt>
+    <maxPt>10.0 0.0 10.0</maxPt>
+  </shape>
+
+</scene>

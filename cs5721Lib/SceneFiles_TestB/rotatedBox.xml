@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 3.0 8.0</position>
+    <lookatPoint>0.0 0.0 0.0</lookatPoint>
+    <focalLength>0.50</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="point">
+    <position>-10.0 10.0 8.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Ground plane -->
+  <shader name="greyMat" type="Lambertian">
+    <diffuse>0.5 0.5 0.5</diffuse>
+  </shader>
+  <shape name="ground" type="box">
+    <shader ref="greyMat" />
+    <minPt>-50.0 -0.5 -50.0</minPt>
+    <maxPt>50.0 0.0 50.0</maxPt>
+  </shape>
+
+  <!-- Base sphere used to instance all other objects in this
+       scene. -->
+  <shader name="blueMat" type="Lambertian">
+    <diffuse>0.4 0.4 1.0</diffuse>
+  </shader>
+
+  <shader name="white" type="Lambertian">
+    <diffuse>1.0 1.0 1.0</diffuse>
+  </shader>
+  <shader name="red" type="Lambertian">
+    <diffuse>1.0 0.0 0.0</diffuse>
+  </shader>
+  <shader name="green" type="Lambertian">
+    <diffuse>0.0 1.0 0.0</diffuse>
+  </shader>
+  <shader name="blue" type="Lambertian">
+    <diffuse>0.0 0.0 1.0</diffuse>
+  </shader>
+
+  <instance name="boxBase" type="box">
+    <shader ref="blueMat"/>
+    <minPt>-0.5 -0.5 -0.5</minPt>
+    <maxPt>0.5 0.5 0.5</maxPt>
+  </instance>
+
+  <shape name="b0" type="instance" id="boxBase">
+    <transform name="xform1">
+      <translate>3.0 0.5 0.0</translate> 
+      <rotate axis="Z">-58.3</rotate>
+      <scale>1.618 0.618 1</scale>
+      <rotate axis="Z">31.7</rotate> 
+    </transform>
+  </shape>
+
+  <shape name="origin" type="sphere">
+    <shader ref="white"/>
+    <center>0 0 0</center>
+    <radius>0.25</radius>
+  </shape>
+  <shape name="origin" type="sphere">
+    <shader ref="red"/>
+    <center>1 0 0</center>
+    <radius>0.125</radius>
+  </shape>
+  <shape name="origin" type="sphere">
+    <shader ref="green"/>
+    <center>0 1 0</center>
+    <radius>0.125</radius>
+  </shape>
+  <shape name="origin" type="sphere">
+    <shader ref="blue"/>
+    <center>0 0 1</center>
+    <radius>0.125</radius>
+  </shape>
+
+</scene>

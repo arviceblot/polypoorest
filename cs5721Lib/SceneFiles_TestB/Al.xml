@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene bgColor="0.5 0.5 0.5">
+
+  <camera name="main" type="perspective">
+    <position>0 4.0 8.0</position>
+    <lookatPoint>0.0 1.8 -3.0</lookatPoint>
+    <focalLength>0.50</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="point">
+    <position>6.0 6.0 8.0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Ground plane -->
+  <shader name="greyMat" type="Lambertian">
+    <diffuse>0.5 0.5 0.5</diffuse>
+  </shader>
+  <shape name="ground" type="box">
+    <shader ref="greyMat" />
+    <minPt>-50.0 -0.5 -50.0</minPt>
+    <maxPt>50.0 0.0 50.0</maxPt>
+  </shape>
+
+  <shader name="whiteMat" type="Lambertian">
+    <diffuse>1.0 1.0 1.0</diffuse>
+  </shader>
+
+  <instance name="AlModel" type="mesh">
+    <file>objFiles/al.obj</file>
+    <shader ref="whiteMat"/>
+  </instance>
+
+  <shape name="b1" type="instance" id="AlModel">
+    <transform name="xform1">
+      <translate>0 3.25 -3</translate>
+    </transform>
+  </shape> 
+
+</scene>
+

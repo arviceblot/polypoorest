@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  A scene with a little bit of everything.
+      Namely, 
+  -->
+<scene>
+
+  <sceneParameters>
+    <bgColor>0.5 0.5 0.6</bgColor>
+<!--    <envMapPrefix>data/startfield_</envMapPrefix> -->
+  </sceneParameters>
+
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 8.0 -15.0</position>
+    <lookatPoint>0 4.0 -5.0</lookatPoint>
+    <focalLength>0.35</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- -->
+  <!-- Lights -->
+  <!-- -->
+  <light type="point">
+    <position>10.0 20.0 -20.0</position>
+    <intensity>0.7 0.7 0.7</intensity>
+  </light>
+
+  <!-- Textures -->
+  <texture name="EarthDiffuse" type="image">
+    <!-- Obtained from http://planetpixelemporium.com/earth.html -->
+    <sourcefile>images/earthmap1k.png</sourcefile>
+  </texture>
+
+  <texture name="EarthSpecular" type="image">
+    <!-- Obtained from http://planetpixelemporium.com/earth.html -->
+    <sourcefile>images/earthspec1k.png</sourcefile>
+  </texture>
+
+  <shader name="EarthShader" type="BlinnPhong">
+    <diffuse tex="EarthDiffuse">1.0 1.0 1.0</diffuse>
+    <specular tex="EarthSpecular">1 1 1</specular>
+    <phongExp>32.0</phongExp>
+    <!-- how to specify normal map and other data sources? -->
+    <!-- <normal source="EarthNMap"></normal> -->
+  </shader>
+
+  <shape name="Earth" type="sphere">
+    <shader ref="EarthShader"/>
+    <center>0.0 4.0 -5.0</center>
+    <radius>4.0</radius>
+  </shape>
+
+</scene>

@@ -1,0 +1,5062 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scene bgColor="0.5 0.5 0.5">
+<camera name="main" type="perspective">
+<position>-180 -180 -180</position>
+<lookatPoint>0.0 0.0 0.0</lookatPoint>
+<focalLength>0.25</focalLength>
+<imagePlaneWidth>0.5</imagePlaneWidth>
+</camera>
+<light type="point"><position>200.0 200.0 200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<light type="point"><position>200.0 200.0 -200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<light type="point"><position>200.0 -200.0 200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<light type="point"><position>200.0 -200.0 -200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<light type="point"><position>-200.0 200.0 200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<light type="point"><position>-200.0 200.0 -200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<light type="point"><position>-200.0 -200.0 -200.0</position><intensity>1.0 1.0 1.0</intensity></light>
+<shader name="blinnphongMirror_0" type="BlinnPhong">
+  <diffuse>0.941819 0.484835 0.670388</diffuse>
+  <specular>1 1 1</specular>
+  <phongExp>35.5465</phongExp>
+</shader>
+<shader name="lambertian_1" type="Lambertian">
+  <diffuse>0.185338 0.365224 0.873936</diffuse>
+</shader>
+<shader name="blinnphongMirror_2" type="BlinnPhong">
+  <diffuse>0.69342 0.890681 0.827891</diffuse>
+  <specular>1 1 1</specular>
+  <phongExp>115.582</phongExp>
+</shader>
+<shader name="blinnphong_3" type="BlinnPhong">
+  <diffuse>0.99931 0.365784 0.136554</diffuse>
+  <specular>1 1 1</specular>
+  <phongExp>39.2122</phongExp>
+</shader>
+<shader name="lambertian_4" type="Lambertian">
+  <diffuse>0.512096 0.790364 0.438989</diffuse>
+</shader>
+<shader name="blinnphongMirror_5" type="BlinnPhong">
+  <diffuse>0.471322 0.594052 0.706368</diffuse>
+  <specular>1 1 1</specular>
+  <phongExp>101.984</phongExp>
+</shader>
+<shader name="lambertian_6" type="Lambertian">
+  <diffuse>0.718401 0.817172 0.669762</diffuse>
+</shader>
+<shader name="blinnphong_7" type="BlinnPhong">
+  <diffuse>0.886019 0.313354 0.930921</diffuse>
+  <specular>1 1 1</specular>
+  <phongExp>111.757</phongExp>
+</shader>
+<shader name="blinnphongMirror_8" type="BlinnPhong">
+  <diffuse>0.897668 0.244369 0.48263</diffuse>
+  <specular>1 1 1</specular>
+  <phongExp>86.0139</phongExp>
+</shader>
+<shader name="lambertian_9" type="Lambertian">
+  <diffuse>0.90733 0.247535 0.877337</diffuse>
+</shader>
+<shader name="baseShader" type="Lambertian">
+   <diffuse>1.0 1.0 1.0</diffuse>
+</shader>
+<!-- Computed radius: 10-->
+<shape name="sphere_0" type="sphere">
+	<center>-150.272 -150.251 -149.874</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_1" type="sphere">
+	<center>-149.543 -150.024 -117.025</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_2" type="sphere">
+	<center>-149.535 -149.973 -83.768</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_3" type="sphere">
+	<center>-149.676 -150.322 -50.3801</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_4" type="sphere">
+	<center>-149.727 -150.011 -16.9426</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_5" type="sphere">
+	<center>-150.172 -150.171 16.1731</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_6" type="sphere">
+	<center>-149.67 -149.888 49.9792</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_7" type="sphere">
+	<center>-150.299 -149.904 83.1699</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_8" type="sphere">
+	<center>-149.617 -149.722 116.508</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_9" type="sphere">
+	<center>-150.434 -150.385 149.653</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_10" type="sphere">
+	<center>-150.341 -116.375 -150.183</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_11" type="sphere">
+	<center>-150.344 -116.226 -116.815</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_12" type="sphere">
+	<center>-150.41 -116.641 -83.3995</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_13" type="sphere">
+	<center>-150.109 -116.752 -49.6179</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_14" type="sphere">
+	<center>-150.109 -116.272 -16.3206</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_15" type="sphere">
+	<center>-149.755 -117.069 16.7277</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_16" type="sphere">
+	<center>-149.872 -116.438 49.9729</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_17" type="sphere">
+	<center>-149.841 -116.252 82.9549</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_18" type="sphere">
+	<center>-149.848 -117.095 116.236</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_19" type="sphere">
+	<center>-150.327 -116.893 149.899</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_20" type="sphere">
+	<center>-150.311 -83.4565 -150.025</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_21" type="sphere">
+	<center>-149.919 -82.8376 -116.946</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_22" type="sphere">
+	<center>-150.066 -83.2678 -83.7945</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_23" type="sphere">
+	<center>-149.842 -83.8072 -49.8409</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_24" type="sphere">
+	<center>-149.811 -82.8818 -16.7856</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_25" type="sphere">
+	<center>-149.549 -83.7468 16.953</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_26" type="sphere">
+	<center>-150.498 -83.261 50.228</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_27" type="sphere">
+	<center>-150.342 -83.2414 83.8116</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_28" type="sphere">
+	<center>-150.248 -83.2631 116.179</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_29" type="sphere">
+	<center>-150.09 -83.4257 149.603</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_30" type="sphere">
+	<center>-150.174 -49.6244 -149.673</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_31" type="sphere">
+	<center>-150.397 -50.2298 -116.518</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_32" type="sphere">
+	<center>-149.62 -49.9041 -83.7299</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_33" type="sphere">
+	<center>-150.497 -49.5125 -49.5537</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_34" type="sphere">
+	<center>-149.847 -50.3019 -17.0977</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_35" type="sphere">
+	<center>-149.961 -49.6452 16.3549</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_36" type="sphere">
+	<center>-150.006 -49.7215 50.1462</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_37" type="sphere">
+	<center>-149.946 -50.4217 83.6646</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_38" type="sphere">
+	<center>-150.482 -50.0379 117.126</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_39" type="sphere">
+	<center>-150.198 -50.1234 149.849</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_40" type="sphere">
+	<center>-150.174 -16.9216 -150.475</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_41" type="sphere">
+	<center>-150.368 -16.8156 -117.161</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_42" type="sphere">
+	<center>-150.191 -16.7662 -83.8223</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_43" type="sphere">
+	<center>-150.349 -16.5083 -50.0195</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_44" type="sphere">
+	<center>-149.648 -16.2622 -16.4718</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_45" type="sphere">
+	<center>-150.38 -16.669 16.8984</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_46" type="sphere">
+	<center>-149.813 -16.9579 50.3544</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_47" type="sphere">
+	<center>-149.527 -16.7322 83.262</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_48" type="sphere">
+	<center>-149.77 -17.0842 116.548</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_49" type="sphere">
+	<center>-149.834 -17.0465 150.161</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_50" type="sphere">
+	<center>-150.025 16.3473 -149.66</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_51" type="sphere">
+	<center>-150.023 16.2085 -116.766</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_52" type="sphere">
+	<center>-150.043 16.6214 -83.7892</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_53" type="sphere">
+	<center>-149.975 16.2024 -50.146</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_54" type="sphere">
+	<center>-149.69 16.6839 -16.1816</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_55" type="sphere">
+	<center>-150.494 17.1002 16.6276</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_56" type="sphere">
+	<center>-149.814 16.7604 49.5922</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_57" type="sphere">
+	<center>-149.928 16.5422 83.0703</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_58" type="sphere">
+	<center>-149.818 16.92 116.558</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_59" type="sphere">
+	<center>-150.124 16.687 150.096</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_60" type="sphere">
+	<center>-150.077 50.1957 -149.912</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_61" type="sphere">
+	<center>-150.005 49.608 -116.604</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_62" type="sphere">
+	<center>-150.342 49.989 -83.3501</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_63" type="sphere">
+	<center>-149.627 49.5947 -49.9891</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_64" type="sphere">
+	<center>-149.944 49.8042 -16.7384</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_65" type="sphere">
+	<center>-150.054 50.3632 16.3257</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_66" type="sphere">
+	<center>-149.613 49.8717 50.1924</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_67" type="sphere">
+	<center>-149.69 50.3388 83.4305</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_68" type="sphere">
+	<center>-150.075 49.5969 116.913</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_69" type="sphere">
+	<center>-149.832 49.6892 149.526</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_70" type="sphere">
+	<center>-150.276 83.3502 -150.057</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_71" type="sphere">
+	<center>-150.213 83.0069 -116.432</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_72" type="sphere">
+	<center>-150.115 82.8848 -83.8236</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_73" type="sphere">
+	<center>-150.137 83.452 -50.42</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_74" type="sphere">
+	<center>-149.96 83.6445 -16.6095</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_75" type="sphere">
+	<center>-150.452 83.7827 17.0323</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_76" type="sphere">
+	<center>-149.92 83.3913 50.07</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_77" type="sphere">
+	<center>-150.177 83.007 83.4288</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_78" type="sphere">
+	<center>-149.934 83.6206 116.603</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_79" type="sphere">
+	<center>-149.915 83.0692 150.002</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_80" type="sphere">
+	<center>-150.128 116.46 -149.864</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_81" type="sphere">
+	<center>-150.405 116.356 -117.023</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_82" type="sphere">
+	<center>-149.662 116.181 -83.1918</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_83" type="sphere">
+	<center>-149.633 116.878 -49.8883</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_84" type="sphere">
+	<center>-150.363 117.089 -16.2439</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_85" type="sphere">
+	<center>-149.795 116.75 16.2508</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_86" type="sphere">
+	<center>-149.913 116.359 50.2289</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_87" type="sphere">
+	<center>-150.138 117.073 83.3687</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_88" type="sphere">
+	<center>-150.106 117.115 116.617</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_89" type="sphere">
+	<center>-150.312 117.121 150.399</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_90" type="sphere">
+	<center>-149.851 149.895 -150.046</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_91" type="sphere">
+	<center>-150.269 150.312 -116.284</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_92" type="sphere">
+	<center>-150.044 149.772 -83.586</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_93" type="sphere">
+	<center>-150.02 149.627 -49.5637</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_94" type="sphere">
+	<center>-150.268 149.652 -16.4545</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_95" type="sphere">
+	<center>-149.665 150.09 16.7357</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_96" type="sphere">
+	<center>-150.422 149.778 50.431</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_97" type="sphere">
+	<center>-150.096 149.542 83.1835</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_98" type="sphere">
+	<center>-149.887 149.805 116.991</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_99" type="sphere">
+	<center>-149.529 149.914 149.921</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_100" type="sphere">
+	<center>-116.37 -149.983 -150.086</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_101" type="sphere">
+	<center>-116.371 -150.402 -116.874</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_102" type="sphere">
+	<center>-117.053 -149.653 -83.7991</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_103" type="sphere">
+	<center>-116.718 -149.833 -50.468</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_104" type="sphere">
+	<center>-116.244 -150.203 -16.9462</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_105" type="sphere">
+	<center>-117.139 -150.156 16.8296</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_106" type="sphere">
+	<center>-116.251 -150.343 49.8281</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_107" type="sphere">
+	<center>-116.224 -150.477 83.622</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_108" type="sphere">
+	<center>-116.766 -149.744 116.317</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_109" type="sphere">
+	<center>-116.716 -150.367 150.453</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_110" type="sphere">
+	<center>-116.6 -116.807 -149.558</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_111" type="sphere">
+	<center>-116.947 -117.012 -116.922</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_112" type="sphere">
+	<center>-116.194 -116.946 -83.5499</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_113" type="sphere">
+	<center>-116.635 -117.036 -50.4947</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_114" type="sphere">
+	<center>-116.921 -116.457 -16.9971</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_115" type="sphere">
+	<center>-116.988 -117.092 16.4336</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_116" type="sphere">
+	<center>-116.784 -116.232 50.0544</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_117" type="sphere">
+	<center>-116.478 -116.362 83.5574</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_118" type="sphere">
+	<center>-117.042 -116.936 116.497</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_119" type="sphere">
+	<center>-116.851 -116.812 150.137</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_120" type="sphere">
+	<center>-116.621 -83.3822 -150.103</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_121" type="sphere">
+	<center>-117.051 -83.0729 -117.129</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_122" type="sphere">
+	<center>-116.749 -83.8174 -83.8128</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_123" type="sphere">
+	<center>-116.641 -83.0824 -50.4804</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_124" type="sphere">
+	<center>-116.25 -83.5514 -16.9803</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_125" type="sphere">
+	<center>-117.071 -83.259 16.843</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_126" type="sphere">
+	<center>-116.243 -82.9169 50.4962</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_127" type="sphere">
+	<center>-116.787 -82.8763 83.3226</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_128" type="sphere">
+	<center>-116.663 -83.2398 116.64</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_129" type="sphere">
+	<center>-116.575 -82.8482 150.048</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_130" type="sphere">
+	<center>-116.987 -49.9758 -150.183</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_131" type="sphere">
+	<center>-116.895 -49.9841 -117.137</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_132" type="sphere">
+	<center>-116.943 -50.4639 -83.5858</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_133" type="sphere">
+	<center>-117.052 -49.9188 -49.7178</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_134" type="sphere">
+	<center>-116.638 -49.8323 -16.5662</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_135" type="sphere">
+	<center>-117.082 -50.3712 16.8544</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_136" type="sphere">
+	<center>-116.584 -50.4886 50.2156</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_137" type="sphere">
+	<center>-117.015 -50.1402 83.56</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_138" type="sphere">
+	<center>-116.474 -49.6524 116.678</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_139" type="sphere">
+	<center>-116.906 -49.6283 149.804</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_140" type="sphere">
+	<center>-116.307 -16.2164 -150.163</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_141" type="sphere">
+	<center>-116.493 -16.3786 -116.711</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_142" type="sphere">
+	<center>-116.474 -16.8579 -82.9944</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_143" type="sphere">
+	<center>-116.736 -17.096 -50.498</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_144" type="sphere">
+	<center>-116.896 -16.7522 -17.0642</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_145" type="sphere">
+	<center>-116.684 -16.9223 16.7592</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_146" type="sphere">
+	<center>-116.985 -16.4784 50.2848</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_147" type="sphere">
+	<center>-116.173 -16.3253 83.6824</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_148" type="sphere">
+	<center>-116.357 -17.0777 116.459</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_149" type="sphere">
+	<center>-116.739 -16.1973 149.986</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_150" type="sphere">
+	<center>-116.631 16.5993 -150.182</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_151" type="sphere">
+	<center>-116.885 16.7128 -116.784</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_152" type="sphere">
+	<center>-116.436 17.15 -83.6246</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_153" type="sphere">
+	<center>-116.411 17.0714 -50.441</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_154" type="sphere">
+	<center>-116.893 16.59 -16.4536</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_155" type="sphere">
+	<center>-116.942 16.8386 17.0784</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_156" type="sphere">
+	<center>-116.294 16.5725 50.1117</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_157" type="sphere">
+	<center>-117.054 16.216 83.6953</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_158" type="sphere">
+	<center>-116.516 16.671 116.804</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_159" type="sphere">
+	<center>-116.529 17.0511 150.277</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_160" type="sphere">
+	<center>-116.882 50.0284 -149.645</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_161" type="sphere">
+	<center>-116.194 49.7116 -117.021</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_162" type="sphere">
+	<center>-116.668 50.3511 -83.4422</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_163" type="sphere">
+	<center>-116.628 49.7606 -49.5035</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_164" type="sphere">
+	<center>-116.306 50.1087 -16.2089</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_165" type="sphere">
+	<center>-116.657 49.7866 17.1621</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_166" type="sphere">
+	<center>-116.527 49.8744 49.6804</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_167" type="sphere">
+	<center>-117.024 50.4553 83.7989</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_168" type="sphere">
+	<center>-116.226 49.6845 116.259</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_169" type="sphere">
+	<center>-116.989 49.9371 150.334</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_170" type="sphere">
+	<center>-116.691 83.4311 -149.985</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_171" type="sphere">
+	<center>-116.751 83.6373 -117.02</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_172" type="sphere">
+	<center>-117.083 83.6421 -83.5883</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_173" type="sphere">
+	<center>-116.637 83.6407 -49.6623</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_174" type="sphere">
+	<center>-116.603 83.5363 -17.0523</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_175" type="sphere">
+	<center>-116.826 83.4505 17.0824</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_176" type="sphere">
+	<center>-116.695 82.9733 49.5144</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_177" type="sphere">
+	<center>-117.134 83.482 82.9042</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_178" type="sphere">
+	<center>-116.896 83.5163 117.087</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_179" type="sphere">
+	<center>-116.874 83.0028 150.497</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_180" type="sphere">
+	<center>-116.519 116.622 -149.693</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_181" type="sphere">
+	<center>-116.26 117.152 -116.778</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_182" type="sphere">
+	<center>-116.329 116.96 -83.7422</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_183" type="sphere">
+	<center>-117.008 116.304 -50.3409</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_184" type="sphere">
+	<center>-116.617 117.068 -16.2611</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_185" type="sphere">
+	<center>-116.912 116.368 16.577</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_186" type="sphere">
+	<center>-116.735 116.914 49.5778</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_187" type="sphere">
+	<center>-117.061 116.656 82.9309</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_188" type="sphere">
+	<center>-117.121 116.221 116.315</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_189" type="sphere">
+	<center>-117.164 116.338 149.605</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_190" type="sphere">
+	<center>-117.137 149.838 -150.34</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_191" type="sphere">
+	<center>-117.032 149.585 -116.483</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_192" type="sphere">
+	<center>-116.741 150.095 -83.6127</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_193" type="sphere">
+	<center>-116.748 150.325 -49.6936</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_194" type="sphere">
+	<center>-116.972 149.939 -17.1221</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_195" type="sphere">
+	<center>-116.344 149.979 16.1692</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_196" type="sphere">
+	<center>-116.611 149.677 50.2756</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_197" type="sphere">
+	<center>-116.936 149.765 83.5275</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_198" type="sphere">
+	<center>-117.063 150.069 116.556</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_199" type="sphere">
+	<center>-116.283 149.697 150.351</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_200" type="sphere">
+	<center>-83.1726 -149.702 -149.605</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_201" type="sphere">
+	<center>-83.214 -149.684 -117.121</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_202" type="sphere">
+	<center>-83.456 -150.04 -83.4577</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_203" type="sphere">
+	<center>-83.3692 -149.526 -49.866</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_204" type="sphere">
+	<center>-82.9024 -150.256 -16.5555</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_205" type="sphere">
+	<center>-83.245 -149.856 16.9819</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_206" type="sphere">
+	<center>-83.2548 -150.173 50.1848</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_207" type="sphere">
+	<center>-83.5374 -149.783 83.6575</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_208" type="sphere">
+	<center>-83.4194 -150.087 116.654</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_209" type="sphere">
+	<center>-83.3299 -149.684 149.829</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_210" type="sphere">
+	<center>-83.4013 -116.393 -150.011</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_211" type="sphere">
+	<center>-83.7189 -116.972 -116.755</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_212" type="sphere">
+	<center>-82.9308 -116.561 -83.3411</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_213" type="sphere">
+	<center>-83.0303 -116.237 -50.3364</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_214" type="sphere">
+	<center>-83.719 -116.635 -16.8357</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_215" type="sphere">
+	<center>-82.8503 -116.461 16.1936</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_216" type="sphere">
+	<center>-83.0618 -117.096 50.1557</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_217" type="sphere">
+	<center>-83.676 -116.468 83.3244</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_218" type="sphere">
+	<center>-83.6437 -116.695 117.158</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_219" type="sphere">
+	<center>-83.416 -116.936 150.153</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_220" type="sphere">
+	<center>-82.8621 -83.4326 -150.253</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_221" type="sphere">
+	<center>-83.2386 -83.7237 -116.711</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_222" type="sphere">
+	<center>-83.8078 -83.2615 -83.1088</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_223" type="sphere">
+	<center>-83.3787 -83.0096 -50.3874</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_224" type="sphere">
+	<center>-83.1984 -83.2627 -16.7036</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_225" type="sphere">
+	<center>-83.4701 -83.7855 16.5382</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_226" type="sphere">
+	<center>-83.0635 -83.0314 49.956</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_227" type="sphere">
+	<center>-83.77 -83.5874 83.5776</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_228" type="sphere">
+	<center>-83.8254 -83.1319 117.025</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_229" type="sphere">
+	<center>-83.2849 -83.332 150.305</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_230" type="sphere">
+	<center>-83.613 -50.406 -149.676</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_231" type="sphere">
+	<center>-83.2969 -50.4092 -116.21</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_232" type="sphere">
+	<center>-83.1784 -49.6427 -83.8158</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_233" type="sphere">
+	<center>-83.1169 -49.7635 -49.6733</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_234" type="sphere">
+	<center>-83.6625 -49.6441 -17.0049</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_235" type="sphere">
+	<center>-83.0698 -49.5865 16.7441</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_236" type="sphere">
+	<center>-83.6817 -50.0553 49.7001</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_237" type="sphere">
+	<center>-83.732 -50.4323 83.8317</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_238" type="sphere">
+	<center>-83.7691 -49.7878 116.967</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_239" type="sphere">
+	<center>-83.3068 -50.3883 149.671</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_240" type="sphere">
+	<center>-83.1141 -17.1356 -149.557</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_241" type="sphere">
+	<center>-83.7263 -17.0663 -116.28</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_242" type="sphere">
+	<center>-83.7989 -16.7509 -83.5449</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_243" type="sphere">
+	<center>-83.621 -16.6025 -49.7384</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_244" type="sphere">
+	<center>-83.3249 -16.5191 -16.2971</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_245" type="sphere">
+	<center>-83.6903 -16.5885 16.3253</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_246" type="sphere">
+	<center>-83.1624 -17.0452 49.9037</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_247" type="sphere">
+	<center>-83.2443 -16.8867 83.4623</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_248" type="sphere">
+	<center>-83.3444 -16.2731 116.349</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_249" type="sphere">
+	<center>-83.7698 -16.9549 150.057</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_250" type="sphere">
+	<center>-83.7474 16.6296 -150.432</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_251" type="sphere">
+	<center>-83.2955 16.7308 -117.066</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_252" type="sphere">
+	<center>-83.6808 16.5754 -83.2447</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_253" type="sphere">
+	<center>-83.1041 16.2849 -50.1913</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_254" type="sphere">
+	<center>-83.7157 16.2903 -16.6426</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_255" type="sphere">
+	<center>-82.9463 16.6179 16.6902</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_256" type="sphere">
+	<center>-83.3465 16.6959 50.1335</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_257" type="sphere">
+	<center>-83.3719 16.9173 83.5983</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_258" type="sphere">
+	<center>-83.0823 17.0121 116.56</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_259" type="sphere">
+	<center>-83.0917 16.5793 150.339</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_260" type="sphere">
+	<center>-82.9072 49.6944 -149.805</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_261" type="sphere">
+	<center>-83.4249 49.9461 -116.841</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_262" type="sphere">
+	<center>-83.7457 49.5626 -83.3625</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_263" type="sphere">
+	<center>-82.88 50.0906 -50.0675</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_264" type="sphere">
+	<center>-83.597 49.9209 -17.0529</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_265" type="sphere">
+	<center>-83.7402 50.472 17.1166</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_266" type="sphere">
+	<center>-83.3854 50.1067 49.8827</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_267" type="sphere">
+	<center>-83.2075 49.563 83.0183</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_268" type="sphere">
+	<center>-83.2914 50.4096 116.377</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_269" type="sphere">
+	<center>-83.1714 50.1976 150.295</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_270" type="sphere">
+	<center>-83.3965 83.0037 -150.047</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_271" type="sphere">
+	<center>-83.0342 83.7259 -116.257</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_272" type="sphere">
+	<center>-82.8824 83.4355 -83.6706</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_273" type="sphere">
+	<center>-83.23 83.1059 -49.7009</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_274" type="sphere">
+	<center>-83.7784 83.3069 -16.7601</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_275" type="sphere">
+	<center>-83.1247 83.799 16.7565</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_276" type="sphere">
+	<center>-83.3479 83.0881 50.4972</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_277" type="sphere">
+	<center>-82.8758 83.7717 83.0817</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_278" type="sphere">
+	<center>-83.6455 83.1561 116.934</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_279" type="sphere">
+	<center>-83.5717 83.706 149.595</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_280" type="sphere">
+	<center>-83.5586 116.51 -150.329</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_281" type="sphere">
+	<center>-83.548 117.021 -116.54</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_282" type="sphere">
+	<center>-83.7787 116.171 -83.7705</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_283" type="sphere">
+	<center>-83.205 116.502 -50.1896</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_284" type="sphere">
+	<center>-83.6153 117.034 -16.6767</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_285" type="sphere">
+	<center>-82.9176 116.23 16.4784</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_286" type="sphere">
+	<center>-83.3845 116.872 49.6976</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_287" type="sphere">
+	<center>-83.7439 117.1 83.6751</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_288" type="sphere">
+	<center>-83.2599 117.039 116.512</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_289" type="sphere">
+	<center>-83.5905 117.151 150.4</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_290" type="sphere">
+	<center>-82.9804 150.399 -149.883</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_291" type="sphere">
+	<center>-83.2973 149.637 -116.434</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_292" type="sphere">
+	<center>-83.6522 150.249 -83.3202</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_293" type="sphere">
+	<center>-83.7432 150.046 -50.2662</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_294" type="sphere">
+	<center>-83.0749 150.391 -17.0543</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_295" type="sphere">
+	<center>-83.5666 150.399 17.0325</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_296" type="sphere">
+	<center>-83.5569 150.134 49.5011</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_297" type="sphere">
+	<center>-83.4199 149.857 83.2393</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_298" type="sphere">
+	<center>-83.0588 150.465 116.56</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_299" type="sphere">
+	<center>-82.8579 149.803 150.469</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_300" type="sphere">
+	<center>-50.3987 -150.025 -149.82</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_301" type="sphere">
+	<center>-49.6398 -149.969 -116.85</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_302" type="sphere">
+	<center>-50.1439 -149.678 -83.0542</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_303" type="sphere">
+	<center>-50.4248 -150.468 -50.0863</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_304" type="sphere">
+	<center>-49.7304 -149.921 -16.4733</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_305" type="sphere">
+	<center>-49.5437 -150.452 16.7313</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_306" type="sphere">
+	<center>-50.266 -150.25 50.1299</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_307" type="sphere">
+	<center>-49.7478 -149.84 83.0533</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_308" type="sphere">
+	<center>-50.4047 -149.802 117.041</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_309" type="sphere">
+	<center>-49.5617 -149.72 150.237</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_310" type="sphere">
+	<center>-49.6209 -116.952 -150.12</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_311" type="sphere">
+	<center>-50.1055 -117.157 -116.217</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_312" type="sphere">
+	<center>-50.1616 -116.173 -83.1602</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_313" type="sphere">
+	<center>-49.9975 -116.6 -50.1107</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_314" type="sphere">
+	<center>-49.9173 -116.34 -16.8848</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_315" type="sphere">
+	<center>-50.2094 -117.074 16.5795</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_316" type="sphere">
+	<center>-50.4228 -116.747 49.8124</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_317" type="sphere">
+	<center>-49.5112 -116.209 83.102</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_318" type="sphere">
+	<center>-49.5155 -116.311 116.4</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_319" type="sphere">
+	<center>-49.7589 -116.785 149.863</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_320" type="sphere">
+	<center>-49.8372 -83.4731 -150.319</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_321" type="sphere">
+	<center>-49.7307 -83.3207 -116.579</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_322" type="sphere">
+	<center>-50.3689 -83.087 -83.5433</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_323" type="sphere">
+	<center>-49.5205 -83.4169 -49.8962</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_324" type="sphere">
+	<center>-49.5352 -83.2632 -16.4802</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_325" type="sphere">
+	<center>-49.6381 -83.0565 16.5548</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_326" type="sphere">
+	<center>-50.1033 -83.5062 50.2317</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_327" type="sphere">
+	<center>-49.9547 -82.8338 83.0261</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_328" type="sphere">
+	<center>-50.1381 -83.0765 116.235</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_329" type="sphere">
+	<center>-50.4629 -83.5104 149.807</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_330" type="sphere">
+	<center>-49.6526 -49.8543 -149.699</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_331" type="sphere">
+	<center>-50.4947 -50.0146 -116.515</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_332" type="sphere">
+	<center>-50.3118 -50.1498 -82.9382</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_333" type="sphere">
+	<center>-49.5607 -50.0223 -50.2137</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_334" type="sphere">
+	<center>-49.6179 -49.8692 -16.6961</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_335" type="sphere">
+	<center>-50.3338 -49.583 16.544</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_336" type="sphere">
+	<center>-50.4103 -50.2127 49.7543</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_337" type="sphere">
+	<center>-49.5101 -49.8816 82.8639</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_338" type="sphere">
+	<center>-50.2683 -49.9833 117.015</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_339" type="sphere">
+	<center>-50.3258 -50.4864 150.163</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_340" type="sphere">
+	<center>-49.5015 -16.2912 -149.65</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_341" type="sphere">
+	<center>-50.4058 -17.0014 -116.899</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_342" type="sphere">
+	<center>-49.852 -16.9428 -83.7327</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_343" type="sphere">
+	<center>-50.3543 -16.9036 -50.4835</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_344" type="sphere">
+	<center>-49.8177 -17.116 -16.6521</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_345" type="sphere">
+	<center>-50.0807 -16.5168 16.274</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_346" type="sphere">
+	<center>-49.6342 -17.0302 50.4857</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_347" type="sphere">
+	<center>-50.2773 -16.543 83.5335</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_348" type="sphere">
+	<center>-50.4233 -16.5697 117.033</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_349" type="sphere">
+	<center>-49.7358 -16.6778 149.547</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_350" type="sphere">
+	<center>-49.8318 17.1348 -150.123</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_351" type="sphere">
+	<center>-50.2999 16.7552 -116.509</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_352" type="sphere">
+	<center>-49.6452 16.3106 -83.7355</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_353" type="sphere">
+	<center>-50.2088 16.5067 -50.0626</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_354" type="sphere">
+	<center>-50.3608 16.8243 -16.7845</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_355" type="sphere">
+	<center>-50.3845 16.7833 16.4372</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_356" type="sphere">
+	<center>-49.5551 16.1758 49.6386</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_357" type="sphere">
+	<center>-49.8626 16.3384 83.273</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_358" type="sphere">
+	<center>-50.066 16.653 117.086</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_359" type="sphere">
+	<center>-50.0497 16.3515 150.102</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_360" type="sphere">
+	<center>-49.5503 49.6999 -149.821</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_361" type="sphere">
+	<center>-49.8234 49.9237 -116.371</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_362" type="sphere">
+	<center>-49.8497 50.3577 -82.961</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_363" type="sphere">
+	<center>-49.6672 50.4644 -50.427</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_364" type="sphere">
+	<center>-49.8232 49.6436 -16.3742</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_365" type="sphere">
+	<center>-50.0483 50.3872 17.1109</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_366" type="sphere">
+	<center>-49.8687 49.9307 49.6771</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_367" type="sphere">
+	<center>-50.1096 50.3756 83.5593</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_368" type="sphere">
+	<center>-50.2643 50.4605 116.31</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_369" type="sphere">
+	<center>-50.4552 49.6858 149.799</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_370" type="sphere">
+	<center>-49.716 83.3829 -150.037</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_371" type="sphere">
+	<center>-50.3553 82.8589 -116.646</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_372" type="sphere">
+	<center>-50.0904 83.1804 -83.8092</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_373" type="sphere">
+	<center>-50.0922 83.8163 -49.7745</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_374" type="sphere">
+	<center>-50.2568 82.9931 -17.0635</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_375" type="sphere">
+	<center>-50.4062 83.6144 16.4928</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_376" type="sphere">
+	<center>-50.2422 83.2187 50.2014</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_377" type="sphere">
+	<center>-50.0797 83.1303 83.3597</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_378" type="sphere">
+	<center>-49.5354 83.4853 116.963</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_379" type="sphere">
+	<center>-49.6244 83.3164 150.034</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_380" type="sphere">
+	<center>-50.343 117.012 -149.682</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_381" type="sphere">
+	<center>-49.8046 116.719 -116.681</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_382" type="sphere">
+	<center>-49.9216 116.494 -83.7983</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_383" type="sphere">
+	<center>-50.3411 116.721 -50.017</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_384" type="sphere">
+	<center>-49.7625 116.962 -16.3308</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_385" type="sphere">
+	<center>-49.5967 116.413 16.9371</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_386" type="sphere">
+	<center>-50.4152 116.586 49.5756</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_387" type="sphere">
+	<center>-50.3454 116.172 82.9315</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_388" type="sphere">
+	<center>-50.0778 116.758 116.917</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_389" type="sphere">
+	<center>-49.8681 116.522 150.235</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_390" type="sphere">
+	<center>-49.7746 150.378 -150.219</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_391" type="sphere">
+	<center>-49.6079 150.091 -116.724</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_392" type="sphere">
+	<center>-49.9756 150.051 -83.2503</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_393" type="sphere">
+	<center>-50.4471 150.372 -49.5542</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_394" type="sphere">
+	<center>-49.89 149.834 -16.23</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_395" type="sphere">
+	<center>-50.3437 149.628 16.2606</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_396" type="sphere">
+	<center>-50.3874 150.398 49.8688</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_397" type="sphere">
+	<center>-49.5845 149.584 83.7863</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_398" type="sphere">
+	<center>-49.5671 150.461 117.081</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_399" type="sphere">
+	<center>-50.2711 150.213 150.021</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_400" type="sphere">
+	<center>-17.0685 -149.732 -149.857</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_401" type="sphere">
+	<center>-16.5327 -150.01 -116.532</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_402" type="sphere">
+	<center>-16.3073 -150.344 -83.0444</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_403" type="sphere">
+	<center>-16.3381 -149.637 -49.6014</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_404" type="sphere">
+	<center>-16.9125 -150.138 -16.5067</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_405" type="sphere">
+	<center>-16.6755 -150.023 16.3121</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_406" type="sphere">
+	<center>-16.7514 -150.258 49.7764</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_407" type="sphere">
+	<center>-16.2721 -149.68 82.855</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_408" type="sphere">
+	<center>-17.0454 -149.938 116.992</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_409" type="sphere">
+	<center>-16.9398 -150.378 150.28</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_410" type="sphere">
+	<center>-16.2054 -116.536 -150.395</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_411" type="sphere">
+	<center>-17.0576 -116.642 -116.913</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_412" type="sphere">
+	<center>-17.1586 -116.606 -83.7365</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_413" type="sphere">
+	<center>-16.6374 -116.383 -50.2011</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_414" type="sphere">
+	<center>-17.0826 -117.032 -16.4837</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_415" type="sphere">
+	<center>-16.8653 -117.147 16.8482</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_416" type="sphere">
+	<center>-16.6236 -116.827 49.822</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_417" type="sphere">
+	<center>-16.9656 -116.851 83.3541</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_418" type="sphere">
+	<center>-16.1807 -116.799 116.339</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_419" type="sphere">
+	<center>-17.0366 -116.886 150.404</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_420" type="sphere">
+	<center>-16.6805 -83.7858 -149.733</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_421" type="sphere">
+	<center>-17.1483 -83.7592 -116.941</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_422" type="sphere">
+	<center>-16.4608 -83.393 -82.9925</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_423" type="sphere">
+	<center>-16.4809 -83.105 -50.3709</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_424" type="sphere">
+	<center>-16.4128 -83.2229 -16.8494</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_425" type="sphere">
+	<center>-16.6149 -83.7656 16.8428</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_426" type="sphere">
+	<center>-16.4137 -83.4673 50.2961</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_427" type="sphere">
+	<center>-16.2553 -82.904 83.339</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_428" type="sphere">
+	<center>-16.2974 -83.7112 116.252</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_429" type="sphere">
+	<center>-16.6957 -82.9381 149.805</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_430" type="sphere">
+	<center>-16.1816 -49.604 -150.03</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_431" type="sphere">
+	<center>-16.1845 -50.26 -116.301</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_432" type="sphere">
+	<center>-16.8765 -49.6528 -83.406</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_433" type="sphere">
+	<center>-17.0672 -50.1562 -50.1316</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_434" type="sphere">
+	<center>-16.3522 -49.7942 -16.7006</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_435" type="sphere">
+	<center>-17.125 -50.1086 16.47</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_436" type="sphere">
+	<center>-16.8418 -49.6069 50.0862</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_437" type="sphere">
+	<center>-16.9243 -49.7227 83.4522</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_438" type="sphere">
+	<center>-17.094 -50.3677 116.8</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_439" type="sphere">
+	<center>-16.2298 -50.2244 149.765</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_440" type="sphere">
+	<center>-16.5756 -16.2941 -150.028</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_441" type="sphere">
+	<center>-16.6134 -16.4721 -116.871</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_442" type="sphere">
+	<center>-17.0513 -16.264 -83.3575</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_443" type="sphere">
+	<center>-16.3184 -16.7332 -50.4217</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_444" type="sphere">
+	<center>-16.9406 -17.0457 -16.8686</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_445" type="sphere">
+	<center>-16.2037 -17.08 17.1494</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_446" type="sphere">
+	<center>-17.1651 -16.6227 49.7718</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_447" type="sphere">
+	<center>-16.2082 -16.1671 82.9266</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_448" type="sphere">
+	<center>-16.8621 -16.8818 116.244</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_449" type="sphere">
+	<center>-16.2295 -16.6968 149.644</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_450" type="sphere">
+	<center>-16.3392 16.5844 -150</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_451" type="sphere">
+	<center>-16.6121 16.2745 -116.302</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_452" type="sphere">
+	<center>-16.9954 16.5157 -83.6299</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_453" type="sphere">
+	<center>-16.5827 16.8933 -50.1309</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_454" type="sphere">
+	<center>-16.62 16.7352 -16.7155</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_455" type="sphere">
+	<center>-16.9587 16.1774 16.2135</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_456" type="sphere">
+	<center>-16.5211 16.5846 50.1149</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_457" type="sphere">
+	<center>-16.2865 16.2974 83.4841</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_458" type="sphere">
+	<center>-16.3057 16.9963 116.296</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_459" type="sphere">
+	<center>-16.2399 16.5843 150.434</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_460" type="sphere">
+	<center>-16.862 50.3177 -150.224</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_461" type="sphere">
+	<center>-16.6306 49.6861 -116.939</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_462" type="sphere">
+	<center>-17.1557 50.3761 -83.0241</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_463" type="sphere">
+	<center>-16.7408 50.3054 -49.6877</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_464" type="sphere">
+	<center>-16.863 49.8361 -16.2009</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_465" type="sphere">
+	<center>-16.898 49.6595 16.9725</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_466" type="sphere">
+	<center>-16.6156 49.667 50.3622</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_467" type="sphere">
+	<center>-16.259 50.2041 83.3891</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_468" type="sphere">
+	<center>-16.7293 50.1651 116.771</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_469" type="sphere">
+	<center>-16.6651 49.9348 149.699</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_470" type="sphere">
+	<center>-16.7284 83.8022 -149.785</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_471" type="sphere">
+	<center>-16.1675 83.0473 -117.023</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_472" type="sphere">
+	<center>-16.7636 83.1981 -83.2101</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_473" type="sphere">
+	<center>-16.4036 82.9004 -49.7993</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_474" type="sphere">
+	<center>-17.1465 83.7337 -17.1136</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_475" type="sphere">
+	<center>-16.4268 83.0893 16.1834</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_476" type="sphere">
+	<center>-16.697 83.7457 49.5934</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_477" type="sphere">
+	<center>-16.8667 83.0011 83.5565</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_478" type="sphere">
+	<center>-16.4162 83.5244 116.8</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_479" type="sphere">
+	<center>-16.4019 83.1429 149.959</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_480" type="sphere">
+	<center>-17.1549 116.822 -149.876</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_481" type="sphere">
+	<center>-16.4891 117.164 -116.645</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_482" type="sphere">
+	<center>-16.4501 116.261 -83.515</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_483" type="sphere">
+	<center>-17.0901 116.81 -50.0801</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_484" type="sphere">
+	<center>-16.5529 116.901 -16.9169</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_485" type="sphere">
+	<center>-16.7804 117.063 16.2071</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_486" type="sphere">
+	<center>-16.8555 116.315 49.6963</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_487" type="sphere">
+	<center>-17.1138 116.455 83.2939</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_488" type="sphere">
+	<center>-16.4638 116.454 116.978</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_489" type="sphere">
+	<center>-16.4444 116.598 149.688</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_490" type="sphere">
+	<center>-16.5387 149.721 -149.601</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_491" type="sphere">
+	<center>-16.5857 149.77 -116.419</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_492" type="sphere">
+	<center>-16.2496 150.015 -83.2817</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_493" type="sphere">
+	<center>-16.7031 149.887 -50.4082</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_494" type="sphere">
+	<center>-16.751 150.039 -16.6846</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_495" type="sphere">
+	<center>-16.6993 150.327 16.4342</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_496" type="sphere">
+	<center>-16.5013 149.903 50.4329</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_497" type="sphere">
+	<center>-17.0566 149.984 82.9661</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_498" type="sphere">
+	<center>-16.4952 149.632 116.647</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_499" type="sphere">
+	<center>-16.6531 150.155 150.194</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_500" type="sphere">
+	<center>16.7537 -150.311 -149.603</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_501" type="sphere">
+	<center>16.8743 -149.552 -116.358</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_502" type="sphere">
+	<center>16.3721 -150.106 -83.8327</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_503" type="sphere">
+	<center>17.072 -150.097 -49.925</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_504" type="sphere">
+	<center>17.0338 -149.624 -17.0982</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_505" type="sphere">
+	<center>16.6921 -150.191 16.8977</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_506" type="sphere">
+	<center>16.926 -149.809 50.4685</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_507" type="sphere">
+	<center>16.9749 -149.568 83.6057</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_508" type="sphere">
+	<center>16.7826 -150.135 116.801</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_509" type="sphere">
+	<center>16.2726 -150.435 149.801</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_510" type="sphere">
+	<center>16.6764 -116.442 -149.613</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_511" type="sphere">
+	<center>16.4811 -117.066 -116.838</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_512" type="sphere">
+	<center>16.9342 -117.144 -82.9446</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_513" type="sphere">
+	<center>16.6242 -117.08 -49.6298</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_514" type="sphere">
+	<center>16.2068 -116.6 -16.4416</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_515" type="sphere">
+	<center>16.3028 -117.097 16.3499</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_516" type="sphere">
+	<center>16.3738 -116.424 50.1792</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_517" type="sphere">
+	<center>16.5759 -116.285 83.2689</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_518" type="sphere">
+	<center>16.2783 -116.579 116.966</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_519" type="sphere">
+	<center>16.8552 -116.786 149.919</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_520" type="sphere">
+	<center>16.248 -82.995 -150.251</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_521" type="sphere">
+	<center>16.5627 -83.713 -117.001</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_522" type="sphere">
+	<center>16.9826 -83.1459 -83.0765</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_523" type="sphere">
+	<center>16.6251 -83.5121 -49.5396</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_524" type="sphere">
+	<center>16.668 -83.5311 -16.9606</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_525" type="sphere">
+	<center>16.3632 -83.8063 16.4813</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_526" type="sphere">
+	<center>17.1081 -83.2806 49.5287</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_527" type="sphere">
+	<center>16.9686 -83.5115 83.7328</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_528" type="sphere">
+	<center>16.26 -83.5557 116.779</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_529" type="sphere">
+	<center>16.5567 -83.303 149.821</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_530" type="sphere">
+	<center>16.8022 -49.6473 -150.136</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_531" type="sphere">
+	<center>16.7333 -50.1091 -116.285</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_532" type="sphere">
+	<center>16.2714 -49.7101 -83.4043</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_533" type="sphere">
+	<center>16.7206 -50.2014 -50.3561</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_534" type="sphere">
+	<center>16.8609 -49.9144 -16.8565</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_535" type="sphere">
+	<center>16.3483 -49.6567 16.3826</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_536" type="sphere">
+	<center>16.1903 -50.4371 50.307</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_537" type="sphere">
+	<center>16.6377 -50.462 82.9675</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_538" type="sphere">
+	<center>16.229 -50.4925 116.913</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_539" type="sphere">
+	<center>16.2784 -49.6743 150.149</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_540" type="sphere">
+	<center>17.0833 -16.1829 -149.539</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_541" type="sphere">
+	<center>17.0323 -16.4843 -116.169</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_542" type="sphere">
+	<center>16.541 -16.33 -82.9882</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_543" type="sphere">
+	<center>16.9846 -16.7755 -49.5356</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_544" type="sphere">
+	<center>17.1108 -16.6339 -16.5531</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_545" type="sphere">
+	<center>16.6052 -16.8122 16.8111</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_546" type="sphere">
+	<center>16.7866 -16.4907 49.5625</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_547" type="sphere">
+	<center>16.788 -17.0375 83.6772</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_548" type="sphere">
+	<center>16.9255 -16.9213 116.42</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_549" type="sphere">
+	<center>16.3863 -16.9395 150.478</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_550" type="sphere">
+	<center>16.4319 17.0105 -150.471</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_551" type="sphere">
+	<center>16.2798 16.7691 -116.504</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_552" type="sphere">
+	<center>16.9117 16.1896 -83.1473</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_553" type="sphere">
+	<center>16.6758 16.8303 -49.572</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_554" type="sphere">
+	<center>16.5782 16.2216 -16.7155</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_555" type="sphere">
+	<center>16.1721 16.2642 16.3094</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_556" type="sphere">
+	<center>16.4722 17.0235 50.1243</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_557" type="sphere">
+	<center>17.0918 16.4316 83.1021</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_558" type="sphere">
+	<center>16.9916 16.8101 116.553</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_559" type="sphere">
+	<center>16.7357 16.6065 149.543</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_560" type="sphere">
+	<center>16.8196 49.7843 -150.196</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_561" type="sphere">
+	<center>16.4954 50.2044 -117.131</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_562" type="sphere">
+	<center>17.0831 49.7679 -83.327</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_563" type="sphere">
+	<center>16.2166 50.3794 -50.1897</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_564" type="sphere">
+	<center>16.9803 50.1424 -16.8071</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_565" type="sphere">
+	<center>16.8114 49.9781 16.7488</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_566" type="sphere">
+	<center>16.1744 49.7919 49.7119</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_567" type="sphere">
+	<center>16.8789 49.8001 83.1994</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_568" type="sphere">
+	<center>16.9659 49.9342 116.623</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_569" type="sphere">
+	<center>17.0152 50.4492 150.077</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_570" type="sphere">
+	<center>16.6284 83.1126 -149.79</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_571" type="sphere">
+	<center>16.5656 83.0902 -116.708</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_572" type="sphere">
+	<center>16.3214 83.21 -83.4295</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_573" type="sphere">
+	<center>16.8054 83.1492 -49.9967</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_574" type="sphere">
+	<center>16.6781 83.1306 -16.7455</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_575" type="sphere">
+	<center>16.9244 83.4275 16.4174</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_576" type="sphere">
+	<center>16.5059 83.7775 50.258</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_577" type="sphere">
+	<center>16.7303 83.215 83.2787</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_578" type="sphere">
+	<center>17.0364 83.8015 116.49</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_579" type="sphere">
+	<center>16.6914 83.4837 149.575</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_580" type="sphere">
+	<center>16.8132 116.643 -150.371</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_581" type="sphere">
+	<center>16.7901 116.423 -116.94</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_582" type="sphere">
+	<center>16.6167 116.628 -83.7279</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_583" type="sphere">
+	<center>16.6777 116.468 -49.9728</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_584" type="sphere">
+	<center>16.7892 116.329 -16.4661</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_585" type="sphere">
+	<center>16.782 116.537 16.3584</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_586" type="sphere">
+	<center>16.9485 117.03 49.7322</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_587" type="sphere">
+	<center>16.3536 116.512 83.1574</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_588" type="sphere">
+	<center>16.3532 116.644 116.854</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_589" type="sphere">
+	<center>16.9093 116.587 149.687</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_590" type="sphere">
+	<center>17.1194 150.13 -150.205</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_591" type="sphere">
+	<center>16.1751 150.493 -116.559</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_592" type="sphere">
+	<center>17.0803 150.371 -83.1046</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_593" type="sphere">
+	<center>16.4233 149.641 -49.959</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_594" type="sphere">
+	<center>16.324 149.538 -16.9147</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_595" type="sphere">
+	<center>17.0461 149.943 16.2781</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_596" type="sphere">
+	<center>16.3517 150.298 49.9447</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_597" type="sphere">
+	<center>16.3183 149.523 82.9218</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_598" type="sphere">
+	<center>16.3551 150.359 116.596</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_599" type="sphere">
+	<center>16.5625 150.334 150.375</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_600" type="sphere">
+	<center>49.6636 -150.12 -149.844</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_601" type="sphere">
+	<center>49.6811 -150.152 -116.614</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_602" type="sphere">
+	<center>49.9484 -149.836 -83.4445</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_603" type="sphere">
+	<center>50.2649 -150.468 -50.0751</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_604" type="sphere">
+	<center>50.3006 -150.211 -16.171</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_605" type="sphere">
+	<center>50.216 -150.31 16.9875</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_606" type="sphere">
+	<center>49.8164 -150.018 49.534</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_607" type="sphere">
+	<center>50.045 -150.448 83.4311</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_608" type="sphere">
+	<center>49.8327 -149.846 117.074</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_609" type="sphere">
+	<center>49.7146 -150.26 150.426</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_610" type="sphere">
+	<center>50.4509 -116.441 -149.942</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_611" type="sphere">
+	<center>50.0992 -117.085 -116.726</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_612" type="sphere">
+	<center>50.4744 -117.104 -83.5695</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_613" type="sphere">
+	<center>49.822 -116.564 -49.7212</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_614" type="sphere">
+	<center>50.3617 -116.571 -17.0604</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_615" type="sphere">
+	<center>50.4093 -116.783 17.0197</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_616" type="sphere">
+	<center>50.2634 -116.192 49.5975</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_617" type="sphere">
+	<center>50.371 -116.242 83.7853</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_618" type="sphere">
+	<center>50.331 -116.77 116.426</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_619" type="sphere">
+	<center>49.6424 -116.602 150.401</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_620" type="sphere">
+	<center>50.2669 -83.7208 -150.32</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_621" type="sphere">
+	<center>49.8016 -83.3302 -117.096</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_622" type="sphere">
+	<center>49.5179 -83.3802 -83.1293</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_623" type="sphere">
+	<center>49.6167 -82.8477 -49.5193</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_624" type="sphere">
+	<center>49.6044 -83.1911 -16.7289</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_625" type="sphere">
+	<center>49.7706 -83.5994 16.7717</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_626" type="sphere">
+	<center>49.8272 -83.2577 50.2069</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_627" type="sphere">
+	<center>50.0593 -83.5424 83.0911</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_628" type="sphere">
+	<center>49.9948 -83.6146 116.612</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_629" type="sphere">
+	<center>49.9698 -83.2886 149.621</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_630" type="sphere">
+	<center>49.8742 -50.2375 -150.254</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_631" type="sphere">
+	<center>50.3019 -50.1686 -117.116</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_632" type="sphere">
+	<center>49.7853 -50.2951 -83.3554</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_633" type="sphere">
+	<center>50.422 -49.8178 -50.2153</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_634" type="sphere">
+	<center>50.1287 -50.4214 -16.2439</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_635" type="sphere">
+	<center>49.8077 -49.5239 16.2595</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_636" type="sphere">
+	<center>49.668 -49.8661 50.3739</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_637" type="sphere">
+	<center>49.776 -49.5141 83.0068</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_638" type="sphere">
+	<center>50.0691 -49.5956 116.182</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_639" type="sphere">
+	<center>49.6757 -49.9327 150.349</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_640" type="sphere">
+	<center>49.5422 -16.4363 -149.822</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_641" type="sphere">
+	<center>50.3674 -17.1406 -116.469</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_642" type="sphere">
+	<center>50.4291 -16.1695 -83.5539</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_643" type="sphere">
+	<center>49.5147 -17.1423 -50.2</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_644" type="sphere">
+	<center>50.2289 -17.1087 -16.3444</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_645" type="sphere">
+	<center>50.0681 -16.4302 16.3465</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_646" type="sphere">
+	<center>49.8696 -17.114 49.8733</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_647" type="sphere">
+	<center>50.3338 -16.3174 83.7227</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_648" type="sphere">
+	<center>49.9944 -16.5586 116.482</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_649" type="sphere">
+	<center>50.1908 -16.2479 149.889</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_650" type="sphere">
+	<center>49.6562 16.8797 -150.495</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_651" type="sphere">
+	<center>50.3421 16.7043 -116.625</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_652" type="sphere">
+	<center>50.091 16.5637 -83.6396</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_653" type="sphere">
+	<center>49.9703 16.9158 -49.909</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_654" type="sphere">
+	<center>50.1764 16.3748 -16.988</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_655" type="sphere">
+	<center>49.8032 16.3167 17.1045</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_656" type="sphere">
+	<center>49.7707 16.5552 49.7156</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_657" type="sphere">
+	<center>50.39 16.3314 83.2418</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_658" type="sphere">
+	<center>50.3771 16.2409 116.31</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_659" type="sphere">
+	<center>50.3391 16.213 149.972</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_660" type="sphere">
+	<center>50.4793 50.3069 -149.969</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_661" type="sphere">
+	<center>50.3737 49.7598 -116.628</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_662" type="sphere">
+	<center>50.4547 49.6418 -82.9204</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_663" type="sphere">
+	<center>50.3268 49.5384 -49.9404</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_664" type="sphere">
+	<center>50.1881 49.6576 -16.3377</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_665" type="sphere">
+	<center>49.6116 49.57 16.8025</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_666" type="sphere">
+	<center>50.3799 49.7307 49.9702</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_667" type="sphere">
+	<center>50.284 49.9631 83.0658</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_668" type="sphere">
+	<center>50.0706 50.0226 116.855</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_669" type="sphere">
+	<center>49.5407 49.8741 150.411</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_670" type="sphere">
+	<center>50.0903 83.0821 -150.486</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_671" type="sphere">
+	<center>50.3867 83.7653 -116.98</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_672" type="sphere">
+	<center>49.98 83.7787 -83.7077</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_673" type="sphere">
+	<center>50.249 83.2245 -50.2628</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_674" type="sphere">
+	<center>50.4302 83.464 -16.2967</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_675" type="sphere">
+	<center>49.5141 83.5924 16.8816</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_676" type="sphere">
+	<center>50.4356 83.806 50.083</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_677" type="sphere">
+	<center>50.3223 83.3367 83.6607</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_678" type="sphere">
+	<center>50.1728 83.1452 117.085</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_679" type="sphere">
+	<center>50.4656 83.1558 149.701</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_680" type="sphere">
+	<center>50.0756 116.837 -149.669</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_681" type="sphere">
+	<center>49.9044 116.549 -116.394</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_682" type="sphere">
+	<center>49.7042 116.843 -83.1683</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_683" type="sphere">
+	<center>50.2434 117.029 -50.4056</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_684" type="sphere">
+	<center>49.7809 116.845 -16.6295</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_685" type="sphere">
+	<center>50.4889 116.314 16.1683</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_686" type="sphere">
+	<center>50.203 116.342 49.8056</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_687" type="sphere">
+	<center>49.5465 116.64 83.3788</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_688" type="sphere">
+	<center>49.9305 116.286 116.655</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_689" type="sphere">
+	<center>50.2133 116.604 149.949</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_690" type="sphere">
+	<center>50.3969 150.043 -150.095</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_691" type="sphere">
+	<center>49.8691 149.782 -117.035</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_692" type="sphere">
+	<center>50.4922 149.938 -83.1424</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_693" type="sphere">
+	<center>49.6742 150.023 -49.9963</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_694" type="sphere">
+	<center>50.2276 150.328 -17.1117</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_695" type="sphere">
+	<center>49.8502 149.589 16.5079</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_696" type="sphere">
+	<center>49.9076 149.963 50.3586</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_697" type="sphere">
+	<center>49.533 150.334 82.8461</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_698" type="sphere">
+	<center>50.0071 150.15 116.78</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_699" type="sphere">
+	<center>49.766 150.448 150.246</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_700" type="sphere">
+	<center>83.3115 -150.203 -150.495</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_701" type="sphere">
+	<center>83.7659 -149.955 -116.752</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_702" type="sphere">
+	<center>83.2313 -150.101 -83.4265</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_703" type="sphere">
+	<center>83.6456 -150.039 -50.4618</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_704" type="sphere">
+	<center>83.5419 -149.696 -17.0189</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_705" type="sphere">
+	<center>83.3268 -150.427 16.9568</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_706" type="sphere">
+	<center>83.1301 -150.197 50.4879</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_707" type="sphere">
+	<center>83.403 -149.718 83.1897</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_708" type="sphere">
+	<center>83.6486 -149.696 116.511</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_709" type="sphere">
+	<center>83.2429 -149.85 150.378</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_710" type="sphere">
+	<center>83.2899 -116.604 -149.67</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_711" type="sphere">
+	<center>83.6304 -116.586 -116.591</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_712" type="sphere">
+	<center>83.1901 -116.905 -83.2659</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_713" type="sphere">
+	<center>83.746 -116.854 -50.1262</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_714" type="sphere">
+	<center>83.2606 -116.176 -16.6058</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_715" type="sphere">
+	<center>83.2807 -116.682 16.6594</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_716" type="sphere">
+	<center>83.5263 -117.118 49.6394</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_717" type="sphere">
+	<center>82.9591 -116.196 82.8739</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_718" type="sphere">
+	<center>82.9811 -116.317 116.266</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_719" type="sphere">
+	<center>83.3838 -116.437 149.569</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_720" type="sphere">
+	<center>83.5638 -83.7385 -149.772</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_721" type="sphere">
+	<center>82.9075 -83.4266 -116.717</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_722" type="sphere">
+	<center>83.1044 -82.9982 -83.5162</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_723" type="sphere">
+	<center>83.1908 -83.7838 -50.3226</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_724" type="sphere">
+	<center>82.9937 -82.8443 -17.0316</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_725" type="sphere">
+	<center>83.2074 -83.4773 16.5605</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_726" type="sphere">
+	<center>82.8882 -83.4577 49.5761</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_727" type="sphere">
+	<center>83.7245 -83.7952 83.3415</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_728" type="sphere">
+	<center>82.9803 -83.4784 116.532</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_729" type="sphere">
+	<center>83.7019 -83.8 149.772</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_730" type="sphere">
+	<center>83.2325 -49.7815 -149.734</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_731" type="sphere">
+	<center>83.6306 -50.0028 -116.592</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_732" type="sphere">
+	<center>83.5061 -49.9404 -83.1144</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_733" type="sphere">
+	<center>83.5631 -49.7602 -50.4929</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_734" type="sphere">
+	<center>83.6966 -50.0279 -16.4679</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_735" type="sphere">
+	<center>83.4735 -49.9774 17.1506</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_736" type="sphere">
+	<center>83.831 -49.9231 50.3938</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_737" type="sphere">
+	<center>83.6312 -50.0715 83.1141</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_738" type="sphere">
+	<center>83.5776 -49.9464 117.14</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_739" type="sphere">
+	<center>82.8724 -50.1677 149.91</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_740" type="sphere">
+	<center>83.7731 -17.0976 -150.169</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_741" type="sphere">
+	<center>83.008 -16.8086 -117.012</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_742" type="sphere">
+	<center>83.3821 -16.4318 -83.1534</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_743" type="sphere">
+	<center>83.1213 -17.0776 -49.571</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_744" type="sphere">
+	<center>83.767 -17.1617 -16.8662</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_745" type="sphere">
+	<center>83.1769 -16.9548 16.5296</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_746" type="sphere">
+	<center>83.2732 -16.9426 50.048</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_747" type="sphere">
+	<center>83.1875 -16.9424 83.4946</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_748" type="sphere">
+	<center>82.9073 -16.7868 116.624</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_749" type="sphere">
+	<center>83.1668 -16.8539 150.338</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_750" type="sphere">
+	<center>83.3254 17.1442 -150.09</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_751" type="sphere">
+	<center>83.234 16.18 -116.288</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_752" type="sphere">
+	<center>83.4353 17.0204 -82.9708</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_753" type="sphere">
+	<center>83.5307 16.9789 -50.2379</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_754" type="sphere">
+	<center>83.6683 16.8482 -17.0799</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_755" type="sphere">
+	<center>83.059 16.577 16.1834</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_756" type="sphere">
+	<center>83.3734 16.5412 50.2032</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_757" type="sphere">
+	<center>83.1579 17.1492 83.5365</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_758" type="sphere">
+	<center>82.8524 16.7631 116.733</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_759" type="sphere">
+	<center>83.0979 16.5591 149.755</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_760" type="sphere">
+	<center>83.2667 49.6033 -150.298</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_761" type="sphere">
+	<center>83.1895 50.4907 -116.538</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_762" type="sphere">
+	<center>83.0182 50.2035 -83.2562</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_763" type="sphere">
+	<center>82.8825 49.8207 -49.8973</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_764" type="sphere">
+	<center>83.2382 49.7061 -16.7153</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_765" type="sphere">
+	<center>83.5568 50.2832 17.0193</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_766" type="sphere">
+	<center>83.7003 50.3469 50.4337</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_767" type="sphere">
+	<center>83.1012 49.5691 83.4945</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_768" type="sphere">
+	<center>83.8133 49.831 116.336</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_769" type="sphere">
+	<center>82.9124 50.4613 149.716</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_770" type="sphere">
+	<center>83.3505 83.6449 -150.245</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_771" type="sphere">
+	<center>83.6552 83.7604 -116.685</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_772" type="sphere">
+	<center>83.2223 83.6682 -83.2338</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_773" type="sphere">
+	<center>82.9727 83.6073 -50.4499</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_774" type="sphere">
+	<center>82.9089 83.3617 -16.2391</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_775" type="sphere">
+	<center>83.3554 83.362 16.3764</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_776" type="sphere">
+	<center>83.1374 82.9109 49.5629</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_777" type="sphere">
+	<center>83.5422 83.4427 83.5559</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_778" type="sphere">
+	<center>83.0077 83.6824 116.588</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_779" type="sphere">
+	<center>83.1536 83.1463 149.923</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_780" type="sphere">
+	<center>83.0508 116.516 -149.618</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_781" type="sphere">
+	<center>83.7387 116.779 -116.345</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_782" type="sphere">
+	<center>83.6384 116.747 -83.5078</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_783" type="sphere">
+	<center>83.0541 116.435 -50.1434</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_784" type="sphere">
+	<center>83.7513 116.415 -16.4896</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_785" type="sphere">
+	<center>83.1891 116.474 16.9412</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_786" type="sphere">
+	<center>83.3646 116.887 50.2141</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_787" type="sphere">
+	<center>83.0987 117.134 83.2656</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_788" type="sphere">
+	<center>83.6066 116.74 116.437</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_789" type="sphere">
+	<center>83.2152 116.522 150.451</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_790" type="sphere">
+	<center>83.4128 149.588 -149.793</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_791" type="sphere">
+	<center>83.0704 149.641 -116.404</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_792" type="sphere">
+	<center>83.6077 149.55 -83.1504</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_793" type="sphere">
+	<center>83.2789 150.328 -49.9417</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_794" type="sphere">
+	<center>83.2226 150.287 -16.8278</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_795" type="sphere">
+	<center>83.8103 149.803 16.7341</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_796" type="sphere">
+	<center>83.3834 149.956 50.463</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_797" type="sphere">
+	<center>83.2067 150.113 83.7023</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_798" type="sphere">
+	<center>83.2891 149.698 116.266</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_799" type="sphere">
+	<center>83.2922 149.669 150.171</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_800" type="sphere">
+	<center>116.974 -149.539 -149.658</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_801" type="sphere">
+	<center>116.296 -149.643 -116.574</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_802" type="sphere">
+	<center>116.712 -150.069 -83.0777</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_803" type="sphere">
+	<center>116.182 -149.611 -49.9921</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_804" type="sphere">
+	<center>117.073 -149.75 -16.7214</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_805" type="sphere">
+	<center>116.325 -149.959 16.6032</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_806" type="sphere">
+	<center>116.785 -150.054 49.8286</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_807" type="sphere">
+	<center>116.53 -150.17 83.1422</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_808" type="sphere">
+	<center>116.691 -150.258 116.719</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_809" type="sphere">
+	<center>116.727 -149.9 149.651</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_810" type="sphere">
+	<center>116.204 -116.9 -150.178</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_811" type="sphere">
+	<center>116.481 -116.246 -116.764</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_812" type="sphere">
+	<center>116.786 -116.691 -83.6896</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_813" type="sphere">
+	<center>116.798 -116.978 -49.875</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_814" type="sphere">
+	<center>117.067 -116.175 -16.583</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_815" type="sphere">
+	<center>116.495 -116.346 16.9669</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_816" type="sphere">
+	<center>116.315 -116.693 49.724</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_817" type="sphere">
+	<center>116.692 -116.176 83.652</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_818" type="sphere">
+	<center>116.733 -116.639 116.563</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_819" type="sphere">
+	<center>116.461 -116.769 149.987</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_820" type="sphere">
+	<center>116.411 -83.1724 -150.345</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_821" type="sphere">
+	<center>116.229 -83.1417 -116.578</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_822" type="sphere">
+	<center>116.895 -83.5685 -83.1542</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_823" type="sphere">
+	<center>116.35 -83.5444 -50.3925</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_824" type="sphere">
+	<center>116.981 -83.1971 -16.1759</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_825" type="sphere">
+	<center>117.121 -82.8385 16.8741</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_826" type="sphere">
+	<center>116.757 -83.7343 49.893</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_827" type="sphere">
+	<center>116.643 -83.3007 83.7952</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_828" type="sphere">
+	<center>116.931 -82.9508 116.724</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_829" type="sphere">
+	<center>117.131 -83.0202 150.131</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_830" type="sphere">
+	<center>117.165 -49.9753 -149.968</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_831" type="sphere">
+	<center>116.666 -49.9629 -116.68</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_832" type="sphere">
+	<center>116.474 -50.2791 -83.5833</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_833" type="sphere">
+	<center>116.941 -49.9888 -49.6959</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_834" type="sphere">
+	<center>116.767 -49.7801 -16.8682</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_835" type="sphere">
+	<center>116.239 -49.6197 16.8216</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_836" type="sphere">
+	<center>116.222 -50.423 50.3084</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_837" type="sphere">
+	<center>116.741 -50.1697 83.4029</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_838" type="sphere">
+	<center>116.536 -49.6766 116.507</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_839" type="sphere">
+	<center>116.278 -50.2975 150.464</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_840" type="sphere">
+	<center>117.032 -16.2884 -149.964</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_841" type="sphere">
+	<center>116.812 -16.7947 -116.198</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_842" type="sphere">
+	<center>116.234 -16.3239 -83.6889</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_843" type="sphere">
+	<center>116.239 -16.4765 -49.5604</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_844" type="sphere">
+	<center>116.803 -17.0207 -16.4461</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_845" type="sphere">
+	<center>116.622 -16.3951 17.1576</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_846" type="sphere">
+	<center>116.657 -16.2815 50.4735</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_847" type="sphere">
+	<center>116.558 -16.2589 83.1655</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_848" type="sphere">
+	<center>116.685 -17.0666 116.394</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_849" type="sphere">
+	<center>116.211 -16.2271 149.575</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_850" type="sphere">
+	<center>116.732 16.8192 -149.564</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_851" type="sphere">
+	<center>116.479 17.1476 -116.737</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_852" type="sphere">
+	<center>116.402 17.0097 -83.3137</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_853" type="sphere">
+	<center>116.868 17.1661 -49.5979</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_854" type="sphere">
+	<center>116.814 16.5592 -17.0992</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_855" type="sphere">
+	<center>116.91 16.5507 16.3323</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_856" type="sphere">
+	<center>116.656 16.6043 50.0812</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_857" type="sphere">
+	<center>116.391 16.9684 83.6311</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_858" type="sphere">
+	<center>116.741 16.9129 116.703</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_859" type="sphere">
+	<center>116.206 17.0043 150.443</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_860" type="sphere">
+	<center>116.809 49.9473 -150.013</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_861" type="sphere">
+	<center>116.428 49.6422 -116.89</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_862" type="sphere">
+	<center>116.508 49.6842 -83.5083</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_863" type="sphere">
+	<center>117.019 49.5675 -50.1442</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_864" type="sphere">
+	<center>116.307 50.2541 -16.561</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_865" type="sphere">
+	<center>116.693 49.5641 16.7103</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_866" type="sphere">
+	<center>116.618 50.473 49.5142</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_867" type="sphere">
+	<center>116.622 49.932 83.0647</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_868" type="sphere">
+	<center>116.543 50.2207 116.847</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_869" type="sphere">
+	<center>117.044 49.8724 150.495</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_870" type="sphere">
+	<center>116.455 83.6954 -149.974</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_871" type="sphere">
+	<center>116.327 83.5016 -116.501</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_872" type="sphere">
+	<center>117.135 82.8468 -83.5729</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_873" type="sphere">
+	<center>116.73 83.5732 -50.4756</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_874" type="sphere">
+	<center>116.255 83.7673 -16.2274</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_875" type="sphere">
+	<center>116.923 83.0983 17.1522</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_876" type="sphere">
+	<center>116.806 83.4852 49.7423</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_877" type="sphere">
+	<center>116.297 82.8666 83.5131</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_878" type="sphere">
+	<center>116.512 83.1421 116.91</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_879" type="sphere">
+	<center>116.251 83.0451 150.304</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_880" type="sphere">
+	<center>116.327 116.27 -150.01</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_881" type="sphere">
+	<center>116.931 116.905 -116.189</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_882" type="sphere">
+	<center>116.898 116.809 -83.6912</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_883" type="sphere">
+	<center>116.326 116.299 -49.8955</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_884" type="sphere">
+	<center>116.25 116.65 -16.3815</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_885" type="sphere">
+	<center>116.272 116.78 17.0903</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_886" type="sphere">
+	<center>117.03 116.783 49.7678</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_887" type="sphere">
+	<center>116.644 116.22 83.3523</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_888" type="sphere">
+	<center>116.353 116.359 116.756</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_889" type="sphere">
+	<center>116.944 117.116 150.033</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_890" type="sphere">
+	<center>116.659 150.346 -150.072</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_891" type="sphere">
+	<center>116.577 149.812 -116.93</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_892" type="sphere">
+	<center>117.038 150.028 -83.4731</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_893" type="sphere">
+	<center>116.336 149.568 -50.0849</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_894" type="sphere">
+	<center>117.134 150.422 -16.4318</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_895" type="sphere">
+	<center>116.986 149.863 16.3772</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_896" type="sphere">
+	<center>117.119 149.626 49.9033</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_897" type="sphere">
+	<center>116.409 150.428 83.548</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_898" type="sphere">
+	<center>116.189 150.002 116.913</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_899" type="sphere">
+	<center>116.459 149.976 150.091</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_900" type="sphere">
+	<center>150.042 -150.237 -149.991</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_901" type="sphere">
+	<center>149.857 -149.512 -116.711</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_902" type="sphere">
+	<center>149.759 -149.841 -82.8678</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_903" type="sphere">
+	<center>150.15 -149.91 -49.9353</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_904" type="sphere">
+	<center>149.504 -150.146 -16.3141</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_905" type="sphere">
+	<center>149.925 -149.825 16.7695</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_906" type="sphere">
+	<center>150.367 -149.576 49.8238</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_907" type="sphere">
+	<center>150.109 -149.677 82.8504</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_908" type="sphere">
+	<center>149.67 -150.283 117.065</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_909" type="sphere">
+	<center>150.373 -150.381 149.875</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_910" type="sphere">
+	<center>149.947 -116.454 -150.491</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_911" type="sphere">
+	<center>150.246 -116.777 -116.462</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_912" type="sphere">
+	<center>149.776 -116.272 -83.5341</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_913" type="sphere">
+	<center>149.712 -117.155 -49.8744</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_914" type="sphere">
+	<center>150.498 -117.086 -16.9228</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_915" type="sphere">
+	<center>149.668 -116.233 16.5194</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_916" type="sphere">
+	<center>149.835 -117.028 49.5308</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_917" type="sphere">
+	<center>149.713 -116.443 83.1669</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_918" type="sphere">
+	<center>149.905 -116.175 117.06</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_919" type="sphere">
+	<center>150.022 -116.637 149.862</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_920" type="sphere">
+	<center>150.395 -83.0005 -150.262</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_921" type="sphere">
+	<center>150.473 -83.7714 -116.664</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_922" type="sphere">
+	<center>149.519 -83.279 -82.8404</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_923" type="sphere">
+	<center>149.744 -82.9828 -50.454</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_924" type="sphere">
+	<center>149.888 -82.8818 -16.618</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_925" type="sphere">
+	<center>149.886 -83.538 16.1975</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_926" type="sphere">
+	<center>149.648 -82.932 50.0857</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_927" type="sphere">
+	<center>149.688 -83.5647 83.405</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_928" type="sphere">
+	<center>150.036 -82.9785 116.991</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_929" type="sphere">
+	<center>150.281 -83.5106 149.835</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_930" type="sphere">
+	<center>150.047 -49.8345 -150.042</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_931" type="sphere">
+	<center>149.537 -49.6218 -117.125</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_932" type="sphere">
+	<center>150.013 -49.5097 -83.2256</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_933" type="sphere">
+	<center>150.262 -50.3809 -49.7024</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_934" type="sphere">
+	<center>149.744 -50.2621 -16.5095</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_935" type="sphere">
+	<center>149.629 -49.7937 16.5431</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_936" type="sphere">
+	<center>150.323 -50.1814 50.2301</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_937" type="sphere">
+	<center>150.002 -49.665 83.1624</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_938" type="sphere">
+	<center>149.772 -50.248 117.052</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_939" type="sphere">
+	<center>150.109 -49.8916 150.439</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_940" type="sphere">
+	<center>149.599 -17.1384 -149.659</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_941" type="sphere">
+	<center>149.526 -16.9892 -116.578</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_942" type="sphere">
+	<center>149.649 -16.1826 -83.679</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_943" type="sphere">
+	<center>149.532 -16.5614 -50.4368</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_944" type="sphere">
+	<center>149.786 -16.8095 -16.3335</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_945" type="sphere">
+	<center>149.742 -16.2125 16.8486</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_946" type="sphere">
+	<center>149.688 -16.5554 49.7912</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_947" type="sphere">
+	<center>150.324 -16.5009 83.7558</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_948" type="sphere">
+	<center>150.407 -16.5809 116.569</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_949" type="sphere">
+	<center>150.246 -16.2596 149.869</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_950" type="sphere">
+	<center>150.459 16.6861 -150.321</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_951" type="sphere">
+	<center>149.748 16.3535 -116.757</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_952" type="sphere">
+	<center>149.87 16.6857 -83.5916</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_953" type="sphere">
+	<center>150.163 16.3828 -50.4049</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_954" type="sphere">
+	<center>150.003 16.2683 -16.3336</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_955" type="sphere">
+	<center>150.259 16.8442 17.1216</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_956" type="sphere">
+	<center>150.036 16.1914 50.0909</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_957" type="sphere">
+	<center>149.556 16.468 83.2246</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_958" type="sphere">
+	<center>149.602 16.9055 116.843</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_959" type="sphere">
+	<center>150.398 16.5658 149.955</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_960" type="sphere">
+	<center>150.484 49.9422 -150.354</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_961" type="sphere">
+	<center>150.158 50.3018 -116.725</center>
+	<radius>10</radius>
+<shader ref="lambertian_4"/>
+</shape>
+<shape name="sphere_962" type="sphere">
+	<center>150.226 50.4042 -83.1945</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_963" type="sphere">
+	<center>149.62 50.4653 -49.7531</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_964" type="sphere">
+	<center>150.197 50.4294 -16.6088</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_965" type="sphere">
+	<center>150.454 50.3615 17.0412</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_966" type="sphere">
+	<center>149.944 50.0823 50.4264</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_967" type="sphere">
+	<center>149.704 49.6578 83.1225</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_968" type="sphere">
+	<center>149.618 49.5649 116.173</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_969" type="sphere">
+	<center>150.389 49.5995 149.575</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_970" type="sphere">
+	<center>149.925 83.2782 -149.91</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_971" type="sphere">
+	<center>149.63 83.2928 -116.175</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_972" type="sphere">
+	<center>150.283 83.1037 -83.2352</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+<shape name="sphere_973" type="sphere">
+	<center>150.205 83.7281 -49.9295</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_974" type="sphere">
+	<center>149.826 83.3076 -16.9217</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_975" type="sphere">
+	<center>150.074 82.8931 16.5258</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_976" type="sphere">
+	<center>150.494 83.7038 50.0675</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_977" type="sphere">
+	<center>150.194 83.6973 83.1189</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_978" type="sphere">
+	<center>149.668 83.8095 116.73</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_979" type="sphere">
+	<center>149.919 83.1701 149.873</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_980" type="sphere">
+	<center>149.735 117.022 -149.98</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_981" type="sphere">
+	<center>150.37 116.827 -116.438</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_982" type="sphere">
+	<center>149.528 116.34 -83.4407</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_983" type="sphere">
+	<center>150.415 116.235 -49.7003</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_984" type="sphere">
+	<center>149.78 116.834 -16.9537</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_985" type="sphere">
+	<center>150.349 116.641 16.5612</center>
+	<radius>10</radius>
+<shader ref="lambertian_6"/>
+</shape>
+<shape name="sphere_986" type="sphere">
+	<center>149.629 116.986 50.1289</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_987" type="sphere">
+	<center>149.896 117.047 83.6698</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_5"/>
+</shape>
+<shape name="sphere_988" type="sphere">
+	<center>149.72 116.733 116.767</center>
+	<radius>10</radius>
+<shader ref="blinnphong_7"/>
+</shape>
+<shape name="sphere_989" type="sphere">
+	<center>149.935 117.03 150.452</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_990" type="sphere">
+	<center>149.654 150.031 -150.312</center>
+	<radius>10</radius>
+<shader ref="lambertian_9"/>
+</shape>
+<shape name="sphere_991" type="sphere">
+	<center>150.189 150.174 -116.887</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_992" type="sphere">
+	<center>150.346 149.905 -83.6891</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_993" type="sphere">
+	<center>150.201 150.289 -50.499</center>
+	<radius>10</radius>
+<shader ref="lambertian_1"/>
+</shape>
+<shape name="sphere_994" type="sphere">
+	<center>150.381 150.268 -16.4582</center>
+	<radius>10</radius>
+<shader ref="blinnphong_3"/>
+</shape>
+<shape name="sphere_995" type="sphere">
+	<center>150.109 149.56 16.805</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_996" type="sphere">
+	<center>149.603 150.375 50.1176</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_997" type="sphere">
+	<center>150.066 150.494 83.29</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_8"/>
+</shape>
+<shape name="sphere_998" type="sphere">
+	<center>149.95 150.165 116.998</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_2"/>
+</shape>
+<shape name="sphere_999" type="sphere">
+	<center>149.701 149.523 150.369</center>
+	<radius>10</radius>
+<shader ref="blinnphongMirror_0"/>
+</shape>
+</scene>

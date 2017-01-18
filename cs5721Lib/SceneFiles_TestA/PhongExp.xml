@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scene>
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 0.0 5.0</position>
+    <viewDir>0 0.0 -1.0</viewDir>
+    <focalLength>0.40</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <light type="point">
+    <position>-10.0 10.0 10.0</position>
+    <intensity>0.94 0.94 0.74</intensity>
+  </light>
+
+  <shader name="redBlinnPhong_2" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>2.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_4" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>4.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_8" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>8.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_16" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>16.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_32" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>32.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_64" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>64.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_128" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>128.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_256" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>256.0</phongExp>
+  </shader>
+  <shader name="redBlinnPhong_512" type="BlinnPhong">
+    <diffuse>1 0.0 0.0</diffuse>
+    <specular>1 1 1</specular>
+    <phongExp>512.0</phongExp>
+  </shader>
+
+  <!-- Sphere -->
+  <shape name="s1" type="sphere">
+    <shader ref="redBlinnPhong_2"/>
+    <center>-3.0 -3.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s4" type="sphere">
+    <shader ref="redBlinnPhong_4"/>
+    <center>0.0 -3.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s8" type="sphere">
+    <shader ref="redBlinnPhong_8"/>
+    <center>3.0 -3.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s16" type="sphere">
+    <shader ref="redBlinnPhong_16"/>
+    <center>-3.0 0.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s32" type="sphere">
+    <shader ref="redBlinnPhong_32"/>
+    <center>0.0 0.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s64" type="sphere">
+    <shader ref="redBlinnPhong_64"/>
+    <center>3.0 0.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s128" type="sphere">
+    <shader ref="redBlinnPhong_128"/>
+    <center>-3.0 3.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s256" type="sphere">
+    <shader ref="redBlinnPhong_256"/>
+    <center>0.0 3.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+  <shape name="s512" type="sphere">
+    <shader ref="redBlinnPhong_512"/>
+    <center>3.0 3.0 -3.0</center>
+    <radius>1.0</radius>
+  </shape>
+
+</scene>

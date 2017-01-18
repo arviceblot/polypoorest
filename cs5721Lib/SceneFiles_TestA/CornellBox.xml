@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<scene bgColor="0.5 0.5 0.5">
+
+  <!-- Cornell Box: Data taken from http://www.graphics.cornell.edu/online/box/data.html -->
+
+  <camera name="main" type="perspective">
+    <position>278 273 -800</position>
+    <viewDir>0 0 1</viewDir>
+    <focalLength>0.035</focalLength>
+    <imagePlaneWidth>0.025</imagePlaneWidth>
+  </camera>
+
+  <light type="area">
+    <position>278.0 548.7 279.50</position>
+    <intensity>1.0 0.85 0.43</intensity>
+    <length>130.0</length>
+    <width>105.0</width>
+    <normal>0.0 -1.0 0.0</normal>
+  </light>
+
+  <shader name="whiteLambertian" type="Lambertian">
+    <diffuse>0.76 0.75 0.5</diffuse>
+  </shader>
+  <shader name="greenLambertian" type="Lambertian">
+    <diffuse>0.15 0.48 0.09</diffuse>
+  </shader>
+  <shader name="redLambertian" type="Lambertian">
+    <diffuse>0.63 0.06 0.04</diffuse>
+  </shader>
+
+  <shape name="floor0" type="triangle">
+    <v0>0.0 0.0 0.0</v0>
+    <v1>0.0 0.0 559.2</v1>
+    <v2>549.6 0.0 559.2</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="floor1" type="triangle">
+    <v0>0.0 0.0 0.0</v0>
+    <v1>549.6 0.0 559.2</v1>
+    <v2>552.8 0.0 0.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="BackWall0" type="triangle">
+    <v0>0.0 0.0 559.2</v0>
+    <v1>0.0 548.8 559.2</v1>
+    <v2>556.0 548.8 559.2</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="BackWall1" type="triangle">
+    <v0>0.0 0.0 559.2</v0>
+    <v1>556.0 548.8 559.2</v1>
+    <v2>549.6 0.0 559.2</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="RightWall0" type="triangle">
+    <v0>0.0 0.0 0.0</v0>
+    <v1>0.0 548.8 0.0</v1>
+    <v2>0.0 548.8 559.2</v2>
+    <shader ref="greenLambertian"/>
+  </shape>
+  <shape name="RightWall1" type="triangle">
+    <v0>0.0 0.0 0.0</v0>
+    <v1>0.0 548.8 559.2</v1>
+    <v2>0.0 0.0 559.2</v2>
+    <shader ref="greenLambertian"/>
+  </shape>
+
+  <shape name="LeftWall0" type="triangle">
+    <v0>549.6 0.0 559.2</v0>
+    <v1>556.0 548.8 559.2</v1>
+    <v2>556.0 548.8 0.0</v2>
+    <shader ref="redLambertian"/>
+  </shape>
+  <shape name="LeftWall1" type="triangle">
+    <v0>549.6 0.0 559.2</v0>
+    <v1>556.0 548.8 0.0</v1>
+    <v2>552.8 0.0 0.0</v2>
+    <shader ref="redLambertian"/>
+  </shape>
+
+  <shape name="Ceiling0" type="triangle">
+    <v0>556.0 548.8 559.2</v0>
+    <v1>0.0 548.8 559.2</v1>
+    <v2>0.0 548.8   0.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="Ceiling1" type="triangle">
+    <v0>556.0 548.8 559.2</v0>
+    <v1>0.0 548.8   0.0</v1>
+    <v2>556.0 548.8 0.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape> 
+
+  <!-- Short Block -->
+  <shape name="ShortBlock_Top0" type="triangle">
+    <v0>82.0 165.0 225.0</v0>
+    <v1>240.0 165.0 272.0</v1>
+    <v2>290.0 165.0 114.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="ShortBlock_Top1" type="triangle">
+    <v0>82.0 165.0 225.0</v0>
+    <v1>290.0 165.0 114.0</v1>
+    <v2>130.0 165.0  65.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="ShortBlock_Left0" type="triangle">
+    <v0>290.0 165.0 114.0</v0>
+    <v1>240.0 165.0 272.0</v1>
+    <v2>240.0   0.0 272.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="ShortBlock_Left1" type="triangle">
+    <v0>290.0 165.0 114.0</v0>
+    <v1>240.0   0.0 272.0</v1>
+    <v2>290.0   0.0 114.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="ShortBlock_Front0" type="triangle">
+    <v0>290.0   0.0 114.0</v0>
+    <v1>130.0 165.0  65.0</v1>
+    <v2>290.0 165.0 114.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="ShortBlock_Front1" type="triangle">
+    <v0>130.0 165.0  65.0</v0>
+    <v1>290.0   0.0 114.0</v1>
+    <v2>130.0   0.0  65.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="ShortBlock_Right0" type="triangle">
+    <v0>130.0   0.0  65.0</v0>
+    <v1>130.0 165.0  65.0</v1>
+    <v2>82.0 165.0 225.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="ShortBlock_Right1" type="triangle">
+    <v0>82.0 165.0 225.0</v0>
+    <v1>130.0   0.0  65.0</v1>
+    <v2>82.0   0.0 225.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="ShortBlock_Back0" type="triangle">
+    <v0>82.0   0.0 225.0</v0>
+    <v1>82.0 165.0 225.0</v1>
+    <v2>240.0 165.0 272.0</v2>
+<!--    <v0>240.0 165.0 272.0</v0>
+    <v1>82.0 165.0 225.0</v1>
+    <v2>82.0   0.0 225.0</v2> -->
+    <shader ref="whiteLambertian"/>
+  </shape> 
+  <shape name="ShortBlock_Back1" type="triangle">
+    <v0>240.0 165.0 272.0</v0>
+    <v1>82.0   0.0 225.0</v1>
+    <v2>240.0   0.0 272.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <!-- Tall Block -->
+  <shape name="TallBlock_Top0" type="triangle">
+    <v0>265.0 330.0 296.0</v0>
+    <v1>314.0 330.0 456.0</v1>
+    <v2>472.0 330.0 406.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="TallBlock_Top1" type="triangle">
+    <v0>265.0 330.0 296.0</v0>
+    <v1>472.0 330.0 406.0</v1>
+    <v2>423.0 330.0 247.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="TallBlock_Top0" type="triangle">
+    <v0>423.0 330.0 247.0</v0>
+    <v1>472.0 330.0 406.0</v1>
+    <v2>472.0   0.0 406.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="TallBlock_Top1" type="triangle">
+    <v0>423.0 330.0 247.0</v0>
+    <v1>472.0   0.0 406.0</v1>
+    <v2>423.0   0.0 247.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="TallBlock_Back0" type="triangle">
+    <v0>472.0 330.0 406.0 </v0>
+    <v1>314.0 330.0 456.0 </v1>
+    <v2>314.0   0.0 456.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="TallBlock_Back1" type="triangle">
+    <v0>472.0 330.0 406.0</v0>
+    <v1>314.0   0.0 456.0</v1>
+    <v2>472.0   0.0 406.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="TallBlock_Right0" type="triangle">
+    <v0>314.0 330.0 456.0</v0>
+    <v1>265.0 330.0 296.0</v1>
+    <v2>265.0   0.0 296.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="TallBlock_Right1" type="triangle">
+    <v0>314.0 330.0 456.0</v0>
+    <v1>265.0   0.0 296.0</v1>
+    <v2>314.0   0.0 456.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+  <shape name="TallBlock_Front0" type="triangle">
+    <v0>265.0 330.0 296.0</v0>
+    <v1>423.0 330.0 247.0</v1>
+    <v2>423.0   0.0 247.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+  <shape name="TallBlock_Front1" type="triangle">
+    <v0>265.0 330.0 296.0</v0>
+    <v1>423.0   0.0 247.0</v1>
+    <v2>265.0   0.0 296.0</v2>
+    <shader ref="whiteLambertian"/>
+  </shape>
+
+</scene>

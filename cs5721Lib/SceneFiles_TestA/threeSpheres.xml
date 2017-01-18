@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<scene>
+  <!-- Simple camera placed back from the origin looking in -Z direction -->
+  <camera name="main" type="perspective">
+    <position>0 0 0</position>
+    <viewDir>0 0 -1</viewDir>
+    <focalLength>1.0</focalLength>
+    <imagePlaneWidth>0.5</imagePlaneWidth>
+  </camera>
+
+  <!-- Basic point light source placed just above the camera. -->
+  <light type="point">
+    <position>0 10 0</position>
+    <intensity>1.0 1.0 1.0</intensity>
+  </light>
+
+  <!-- Lambertian Shader -->
+  <shader name="yellow" type="Lambertian">
+    <diffuse>1 1 0</diffuse>
+  </shader>
+
+  <shader name="cyan" type="Lambertian">
+    <diffuse>0 1 1</diffuse>
+  </shader>
+
+  <shape name="sphere1" type="sphere">
+    <shader ref="yellow" />
+    <center>0 0.0 -5</center>
+    <radius>0.5</radius>
+  </shape>
+
+  <shape name="sphere2" type="sphere">
+    <shader ref="cyan" />
+    <center>0 0.0 -6</center>
+    <radius>1.4</radius>
+  </shape>
+
+  <shape name="sphere3" type="sphere">
+    <shader ref="yellow" />
+    <center>0 0.0 -8</center>
+    <radius>2</radius>
+  </shape>
+</scene>
