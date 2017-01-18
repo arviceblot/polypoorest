@@ -13,8 +13,8 @@ AreaLight::AreaLight(
     width(width),
     length(length)
 {
-    basis.setU(basis.getU() * width);
-    basis.setV(basis.getV() * length);
+    basis.setU(basis.getU() * width * 0.5f);
+    basis.setV(basis.getV() * length * 0.5f);
 }
 
 AreaLight::~AreaLight()
