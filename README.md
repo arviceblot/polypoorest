@@ -7,6 +7,19 @@ This project was originally created as a class assignment. Modifications to the
 original submission include the addition of some C++11 features and the
 replacement of vector math library with GLM.
 
+## Features
+* Diffuse materials and specular highlights.
+* Glossy reflections.
+* Point and area lights.
+* Parallel rendering.
+* Super basic triangle rasterizer, limited support.
+
+### Potential future features
+* Object instancing (transforms).
+* OBJ file support.
+* Spot and directional lights.
+* Textures.
+
 ## Requirements ##
 ### Linux ###
 * Cross-platform Make (CMake) v2.8+
