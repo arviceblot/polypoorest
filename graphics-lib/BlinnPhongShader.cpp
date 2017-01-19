@@ -52,8 +52,7 @@ void BlinnPhongShader::postLightingOperation(Scene *scene, RaycastHit & hit, int
             rNewDir = glm::normalize(rNewDir);
             reflectionRay.setDirection(rNewDir);
         }
-        color = (1.0f - mirrorCoefficient)
-                * color + mirrorCoefficient
-                * scene->computeColor(reflectionRay, 0.0001f, std::numeric_limits<float>::max(), depth - 1);
+        color = (1.0f - mirrorCoefficient) * color
+            + mirrorCoefficient * scene->computeColor(reflectionRay, 0.0001f, std::numeric_limits<float>::max(), depth - 1);
     }
 }
