@@ -9,8 +9,8 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cs5721Lib/cs5721GraphicsLib/cmake/Mod
 # find png and zlib libs
 find_package(PNG REQUIRED)
 if (PNG_FOUND)
-  message(STATUS "Found png: ${PNG_INCLUDE_DIR}, ${PNG_LIBRARY}")
-  include_directories(${PNG_INCLUDE_DIR})
+    message(STATUS "Found png: ${PNG_INCLUDE_DIR}, ${PNG_LIBRARY}")
+    include_directories(${PNG_INCLUDE_DIR})
 endif (PNG_FOUND)
 
 # boost imports
@@ -19,16 +19,16 @@ set(Boost_USE_STATIC_LIBS TRUE)
 
 find_package(Boost REQUIRED date_time program_options system thread unit_test_framework)
 if(${Boost_FOUND})
-  include_directories(${Boost_INCLUDE_DIR})
+    include_directories(${Boost_INCLUDE_DIR})
 endif()
 
 # Add appropriate debug flags
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -Wall")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -Wall -Wextra")
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/cs5721Lib/cs5721GraphicsLib/src
     ${CMAKE_SOURCE_DIR}/graphics-lib
-)
+    )
 
 # Add the CS5721 Graphics Library directory
 add_subdirectory(cs5721Lib/cs5721GraphicsLib)

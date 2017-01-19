@@ -19,6 +19,7 @@
 #include "ShapeCreator.h"
 #include "Scene.h"
 #include "ThreadData.h"
+#include "RenderWindow.h"
 
 using namespace sivelab;
 
@@ -96,6 +97,9 @@ int main(int argc, char* argv[])
             activatedThreads[i] = new boost::thread(rwt);
         }
 
+        RenderWindow window(threadData->image, args.width, args.height);
+        window.run();
+
         // wait for threads to finish
         std::cout << "Rendering..." << std::endl;
         for (int i = 0; i < threads; i++)
@@ -109,10 +113,10 @@ int main(int argc, char* argv[])
             for (int y = 0; y < h; y++)
             {
                 imData[y][x] = png::rgb_pixel(
-                    static_cast<int>(std::floor(threadData->image[(x + y * w) * 3] * 255)),
-                    static_cast<int>(std::floor(threadData->image[1 + (x + y * w) * 3] * 255)),
-                    static_cast<int>(std::floor(threadData->image[2 + (x + y * w) * 3] * 255))
-                );
+                                   static_cast<int>(std::floor(threadData->image[(x + y * w) * 3] * 255)),
+                                   static_cast<int>(std::floor(threadData->image[1 + (x + y * w) * 3] * 255)),
+                                   static_cast<int>(std::floor(threadData->image[2 + (x + y * w) * 3] * 255))
+                               );
             }
         }
 

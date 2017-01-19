@@ -21,11 +21,9 @@ AreaLight::~AreaLight()
 {
 }
 
-/**
- * WTF is this doing?!
- */
-const glm::vec3 & AreaLight::getPosition() const
+const glm::vec3 AreaLight::getPosition() const
 {
+    // get a random point inside the area light
     auto result = position;
     float e1 = static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
     result += e1 * basis.getU();

@@ -18,7 +18,7 @@ public:
         intensity(intensity) {}
     virtual ~Light() = 0;
 
-    virtual const glm::vec3 & getPosition() const
+    virtual const glm::vec3 getPosition() const
     {
         return position;
     }

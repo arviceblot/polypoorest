@@ -18,7 +18,7 @@ public:
     );
     virtual ~AreaLight();
 
-    virtual const glm::vec3 & getPosition() const;
+    virtual const glm::vec3 getPosition() const;
 
     inline const Basis & getBasis() const
     {
