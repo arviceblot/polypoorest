@@ -14,6 +14,7 @@ replacement of vector math library with GLM, and anything listed under [New feat
 * Parallel rendering
 * Super basic triangle rasterizer, limited support
 * PNG file export
+* Anti-aliasing with jittered sampling
 
 ### New features
 * Render preview window
