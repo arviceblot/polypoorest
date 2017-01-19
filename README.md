@@ -1,30 +1,35 @@
-Ray Tracer
-==========
+polypoorest
+===========
 
 Create images using an image-order, ray tracing engine algorithm.
 
 This project was originally created as a class assignment. Modifications to the
-original submission include the addition of some C++11 features and the
-replacement of vector math library with GLM.
+original submission include the addition of some C++11 features, the
+replacement of vector math library with GLM, and anything listed under [New features](#new-features).
 
 ## Features
-* Diffuse materials and specular highlights.
-* Glossy reflections.
-* Point and area lights.
-* Parallel rendering.
-* Super basic triangle rasterizer, limited support.
+* Diffuse materials and specular highlights
+* Glossy reflections
+* Point and area lights
+* Parallel rendering
+* Super basic triangle rasterizer, limited support
+* PNG file export
+
+### New features
+* Render preview window
 
 ### Potential future features
-* Object instancing (transforms).
-* OBJ file support.
-* Spot and directional lights.
-* Textures.
+* Object instancing (transforms)
+* OBJ file support
+* Spot and directional lights
+* Textures
 
 ## Requirements ##
 ### Linux ###
+Mainly tested on Ubuntu 16.04.
 * Cross-platform Make (CMake) v2.8+
-* GNU Make or equivalent.
-* GCC or an alternative C++11 compatible compiler.
+* GNU Make or equivalent
+* GCC or an alternative C++11 compatible compiler
 * Boost v1.53+
 * SFML v2+
 * OpenGL
@@ -33,17 +38,17 @@ replacement of vector math library with GLM.
 
 ## Building ##
 ### Release ###
-```
-$ mkdir build
-$ cd build
-$ cmake -DCMAKE_BUILD_TYPE=Release ..
-$ make
+```shell
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
 ```
 
 ### Debugging ###
-```
-$ mkdir debug
-$ cd debug
-$ cmake -DCMAKE_BUILD_TYPE=Debug ..
-$ make
+```shell
+mkdir debug
+cd debug
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+make
 ```
