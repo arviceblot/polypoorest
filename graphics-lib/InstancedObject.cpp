@@ -23,8 +23,8 @@ bool InstancedObject::isClosestHit(const Ray &ray, const float &tMin, float &tMa
     // else
     //     return false;
     Ray transRay;
-    transRay.setOrigin(glm::vec3((invTransform * glm::vec4(ray.getOrigin(), 1.0f))));
-    transRay.setDirection(glm::vec3((invTransform * glm::vec4(ray.getDirection(), 1.0f))));
+    transRay.origin = glm::vec3((invTransform * glm::vec4(ray.origin, 1.0f)));
+    transRay.direction = glm::vec3((invTransform * glm::vec4(ray.direction, 1.0f)));
 
     if (base->isClosestHit(transRay, tMin, tMax, hit))
     {

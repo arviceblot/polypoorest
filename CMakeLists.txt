@@ -23,7 +23,7 @@ if(${Boost_FOUND})
 endif()
 
 # Add appropriate debug flags
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -Wall")
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/cs5721Lib/cs5721GraphicsLib/src

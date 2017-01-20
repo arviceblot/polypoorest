@@ -13,7 +13,7 @@ add_library(graphics-lib
     InstancedObject.cpp InstancedObject.h
     LambertianShader.cpp LambertianShader.h
     Light.cpp Light.h
-    Mathf.h
+    Mathf.h Mathf.cpp
     PerspectiveCamera.cpp PerspectiveCamera.h
     PointLight.cpp PointLight.h
     Ray.h

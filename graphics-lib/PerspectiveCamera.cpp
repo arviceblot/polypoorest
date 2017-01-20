@@ -12,10 +12,8 @@ void PerspectiveCamera::computeRay(Ray &ray, float i, float j)
     float u = l + ((r - l) * (i + 0.5f)) / size.x;
     float v = b + ((t - b) * (j + 0.5f)) / size.y;
 
-    ray.setDirection(
-        -focalLength * basis.getW()
-        + u * basis.getU()
-        + v * basis.getV()
-    );
-    ray.setOrigin(position);
+    ray.direction = -focalLength * basis.getW()
+                    + u * basis.getU()
+                    + v * basis.getV();
+    ray.origin = position;
 }

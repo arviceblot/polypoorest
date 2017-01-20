@@ -27,12 +27,6 @@ Triangle::Triangle(
     surfaceNormal = glm::normalize(surfaceNormal);
 }
 
-Triangle::~Triangle()
-{
-    verticies.clear();
-    delete bbox;
-}
-
 bool Triangle::isClosestHit(const Ray &ray, const float &tMin, float &tMax, RaycastHit &hit)
 {
     // check the bounding box first
@@ -41,8 +35,8 @@ bool Triangle::isClosestHit(const Ray &ray, const float &tMin, float &tMax, Rayc
         return false;
     }
 
-    auto rDir = ray.getDirection();
-    auto rOr = ray.getOrigin();
+    auto rDir = ray.direction;
+    auto rOr = ray.origin;
 
     float a = A[0] - B[0];
     float b = A[1] - B[1];
@@ -57,28 +51,28 @@ bool Triangle::isClosestHit(const Ray &ray, const float &tMin, float &tMax, Rayc
     float k = A[1] - rOr[1];
     float l = A[2] - rOr[2];
 
-    float AKMinusJB = a*k - j*b;
-    float JCMinusAL = j*c - a*l;
-    float BLMinusKC = b*l - k*c;
-    float EIMinusHF = e*i - h*f;
-    float GFMinusDI = g*f - d*i;
-    float DHMinusEG = d*h - e*g;
+    float AKMinusJB = a * k - j * b;
+    float JCMinusAL = j * c - a * l;
+    float BLMinusKC = b * l - k * c;
+    float EIMinusHF = e * i - h * f;
+    float GFMinusDI = g * f - d * i;
+    float DHMinusEG = d * h - e * g;
 
-    float invM = 1.0f / (a*EIMinusHF + b*GFMinusDI + c*DHMinusEG);
+    float invM = 1.0f / (a * EIMinusHF + b * GFMinusDI + c * DHMinusEG);
 
-    float t = -1.0f * (f*AKMinusJB + e*JCMinusAL + d*BLMinusKC) * invM;
+    float t = -1.0f * (f * AKMinusJB + e * JCMinusAL + d * BLMinusKC) * invM;
     if (t < tMin || t > tMax)
     {
         return false;
     }
 
-    float gamma = (i*AKMinusJB + h*JCMinusAL + g*BLMinusKC) * invM;
+    float gamma = (i * AKMinusJB + h * JCMinusAL + g * BLMinusKC) * invM;
     if (gamma < 0.0f || gamma > 1.0f)
     {
         return false;
     }
 
-    float beta = (j*EIMinusHF + k*GFMinusDI + l*DHMinusEG) * invM;
+    float beta = (j * EIMinusHF + k * GFMinusDI + l * DHMinusEG) * invM;
     if (beta < 0.0f || beta > 1.0f - gamma)
     {
         return false;
@@ -87,14 +81,14 @@ bool Triangle::isClosestHit(const Ray &ray, const float &tMin, float &tMax, Rayc
     // if this point is reached, we have intersection
     tMax = t;
     float alpha = 1.0f - beta - gamma;
-    auto p = alpha*A + beta*B + gamma*C; // point of intersection
+    auto p = alpha * A + beta * B + gamma * C; // point of intersection
 
     // set hit struct properties
     hit.normal = surfaceNormal;
     hit.point = p;
     hit.shape = this;
     hit.shader = shaderRef;
-    hit.sourceRayDir = ray.getDirection();
+    hit.sourceRayDir = ray.direction;
 
     return true;
 }

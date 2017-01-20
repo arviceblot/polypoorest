@@ -23,7 +23,7 @@ public:
         RaycastHit& hit
     );
 
-    inline const glm::vec3 & getSurfaceNormal() const { return surfaceNormal; }
+    const glm::vec3 & getSurfaceNormal() const;
 
 protected:
     glm::vec3 A;
@@ -31,3 +31,14 @@ protected:
     glm::vec3 C;
     glm::vec3 surfaceNormal;
 };
+
+inline Triangle::~Triangle()
+{
+    verticies.clear();
+    delete bbox;
+}
+
+inline const glm::vec3 & Triangle::getSurfaceNormal() const
+{
+    return surfaceNormal;
+}

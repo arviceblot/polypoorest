@@ -12,10 +12,10 @@ void LambertianShader::perLightOperation(Scene *scene, Light *light, RaycastHit 
     auto direction = glm::normalize(light->getPosition() - hit.point);
     Ray shadowRay(hit.point, direction);
 
-    if (!scene->isHit(shadowRay, 0.0001f))
+    if (!scene->isHit(shadowRay, Mathf::Epsilon))
     {
         color += diffuse * light->getIntensity()
-                 * std::max(0.0f, glm::dot(hit.normal, shadowRay.getDirection()));
+                 * std::max(0.0f, glm::dot(hit.normal, shadowRay.direction));
     }
 }
 
@@ -23,7 +23,7 @@ void LambertianShader::perLightOperation(Scene *scene, Light *light, RaycastHit 
 void LambertianShader::postLightingOperation(Scene *scene, RaycastHit & hit, int depth, glm::vec3 &color)
 {
     // check if we should do anything with reflections
-    if (depth > 0 && !Mathf::areLike(mirrorCoefficient, 0.0f))
+    if (depth > 0 && !Mathf::Approximately(mirrorCoefficient, 0.0f))
     {
         // generate reflection ray
         auto direction = hit.sourceRayDir + 2 * (glm::dot((glm::vec3(-1.0f) * hit.sourceRayDir), hit.normal)) * hit.normal;
@@ -31,6 +31,6 @@ void LambertianShader::postLightingOperation(Scene *scene, RaycastHit & hit, int
         Ray reflectionRay(hit.point, direction);
 
         color += mirrorCoefficient
-                 * scene->computeColor(reflectionRay, 0.0001f, std::numeric_limits<float>::max(), depth - 1);
+                 * scene->computeColor(reflectionRay, Mathf::Epsilon, Mathf::Max, depth - 1);
     }
 }

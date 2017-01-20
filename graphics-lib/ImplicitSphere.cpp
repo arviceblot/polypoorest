@@ -46,9 +46,9 @@ bool ImplicitSphere::isClosestHit(const Ray &ray, const float &tMin, float &tMax
         return false;
     }
 
-    float a = glm::dot(ray.getDirection(), ray.getDirection());
-    float b = glm::dot(ray.getDirection() * glm::vec3(2.0f), ray.getOrigin()- center);
-    float c = glm::dot((ray.getOrigin()- center), (ray.getOrigin() - center)) - std::pow(radius, 2);
+    float a = glm::dot(ray.direction, ray.direction);
+    float b = glm::dot(ray.direction * glm::vec3(2.0f), ray.origin - center);
+    float c = glm::dot((ray.origin - center), (ray.origin - center)) - std::pow(radius, 2);
     float descriminant = std::pow(b, 2) - (4 * a * c);
 
     if (descriminant < 0)
@@ -65,7 +65,7 @@ bool ImplicitSphere::isClosestHit(const Ray &ray, const float &tMin, float &tMax
         if (t > tMin && t < tMax)
         {
             tMax = t;
-            glm::vec3 p = ray.getOrigin() + (glm::vec3(t) * ray.getDirection()); // point of intersection
+            glm::vec3 p = ray.origin + (glm::vec3(t) * ray.direction); // point of intersection
             glm::vec3 surfaceNormal = p - center;
             surfaceNormal = glm::normalize(surfaceNormal);
 
@@ -74,7 +74,7 @@ bool ImplicitSphere::isClosestHit(const Ray &ray, const float &tMin, float &tMax
             hit.point = p;
             hit.shape = this;
             hit.shader = shaderRef;
-            hit.sourceRayDir = ray.getDirection();
+            hit.sourceRayDir = ray.direction;
 
             return true;
         }

@@ -20,21 +20,45 @@ public:
 
     virtual const glm::vec3 getPosition() const;
 
-    inline const Basis & getBasis() const
-    {
-        return basis;
-    }
-    inline const float & getWidth() const
-    {
-        return width;
-    }
-    inline const float & getLength() const
-    {
-        return length;
-    }
+    const Basis & getBasis() const;
+    const float & getWidth() const;
+    const float & getLength() const;
 
 private:
     Basis basis;
     float width;
     float length;
 };
+
+inline AreaLight::AreaLight(
+    const std::string &type,
+    const glm::vec3 &position,
+    const glm::vec3 &intensity,
+    const glm::vec3 &normal,
+    const float &width,
+    const float &length
+) : Light(type, position, intensity),
+    basis(normal, glm::vec3(1.0f, 0.0f, 0.0f)),
+    width(width),
+    length(length)
+{
+    basis.setU(basis.getU() * width);
+    basis.setV(basis.getV() * length);
+}
+
+inline AreaLight::~AreaLight() {}
+
+inline const Basis & AreaLight::getBasis() const
+{
+    return basis;
+}
+
+inline const float & AreaLight::getWidth() const
+{
+    return width;
+}
+
+inline const float & AreaLight::getLength() const
+{
+    return length;
+}

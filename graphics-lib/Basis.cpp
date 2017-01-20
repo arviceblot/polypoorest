@@ -15,7 +15,7 @@ Basis::Basis(const glm::vec3 &gaze, const glm::vec3 &b)
     w = (-1.0f * gaze) / glm::length(gaze);
 
     auto t = b;
-    if (glm::areCollinear(w, b, Mathf::pcEps))
+    if (glm::areCollinear(w, b, Mathf::Epsilon))
     {
         int mindex = 0;
         for (int i = 0; i < 3; i++)

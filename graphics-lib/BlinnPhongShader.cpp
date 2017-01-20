@@ -13,46 +13,42 @@ void BlinnPhongShader::perLightOperation(Scene *scene, Light *light, RaycastHit 
     // Note: this is L in our equation
     Ray shadowRay(hit.point, light->getPosition() - hit.point);
 
-    if (!scene->isHit(shadowRay, 0.0001f, 1.0f))
+    if (!scene->isHit(shadowRay, Mathf::Epsilon, 1.0f))
     {
-        shadowRay.setDirection(glm::normalize(shadowRay.getDirection()));
+        shadowRay.direction = glm::normalize(shadowRay.direction);
 
         glm::vec3 v = scene->cameras[0]->getPosition() - hit.point;
         v = glm::normalize(v);
 
         // bisector between l and v
-        glm::vec3 h = (v + shadowRay.getDirection()) / glm::length(v + shadowRay.getDirection());
+        glm::vec3 h = (v + shadowRay.direction) / glm::length(v + shadowRay.direction);
 
-        c += (diffuse * light->getIntensity()
-              * std::max(0.0f, glm::dot(hit.normal, shadowRay.getDirection())))
-             + (specular * light->getIntensity()
-                * std::pow(std::max(0.0f, glm::dot(hit.normal, h)), phongExponent));
+        c += (diffuse * light->getIntensity() * std::max(0.0f, glm::dot(hit.normal, shadowRay.direction)))
+             + (specular * light->getIntensity() * std::pow(std::max(0.0f, glm::dot(hit.normal, h)), phongExponent));
     }
 }
 
 void BlinnPhongShader::postLightingOperation(Scene *scene, RaycastHit & hit, int depth, glm::vec3 &color)
 {
     // check if we should do anything with reflections
-    if (depth > 0 && !Mathf::areLike(mirrorCoefficient, 0.0f))
+    if (depth > 0 && !Mathf::Approximately(mirrorCoefficient, 0.0f))
     {
         // generate reflection ray R
         auto direction = hit.sourceRayDir + 2.0f * glm::dot((-1.0f * hit.sourceRayDir), hit.normal) * hit.normal;
         direction = glm::normalize(direction);
         Ray reflectionRay(hit.point, direction);
 
-        if (!Mathf::areLike(roughness, 0.0f))
+        if (!Mathf::Approximately(roughness, 0.0f))
         {
-            Basis b(reflectionRay.getDirection());
-            float u = (-roughness / 2.0f)
-                      + (static_cast<float>(rand()) / static_cast<float>(RAND_MAX)) * roughness;
-            float v = (-roughness / 2.0f)
-                      + (static_cast<float>(rand()) / static_cast<float>(RAND_MAX)) * roughness;
-            glm::vec3 rNewDir = reflectionRay.getDirection();
+            Basis b(reflectionRay.direction);
+            float u = (-roughness / 2.0f) + Mathf::Random() * roughness;
+            float v = (-roughness / 2.0f) + Mathf::Random() * roughness;
+            glm::vec3 rNewDir = reflectionRay.direction;
             rNewDir += (u * b.getU()) + (v * b.getV());
             rNewDir = glm::normalize(rNewDir);
-            reflectionRay.setDirection(rNewDir);
+            reflectionRay.direction = rNewDir;
         }
         color = (1.0f - mirrorCoefficient) * color
-            + mirrorCoefficient * scene->computeColor(reflectionRay, 0.0001f, std::numeric_limits<float>::max(), depth - 1);
+                + mirrorCoefficient * scene->computeColor(reflectionRay, Mathf::Epsilon, Mathf::Max, depth - 1);
     }
 }

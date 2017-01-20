@@ -1,27 +1,10 @@
 #include "BoundingBox.h"
 
-BoundingBox::BoundingBox(
-    const glm::vec3 &minPoint,
-    const glm::vec3 &maxPoint
-) : Shape("", "", NULL), minPoint(minPoint), maxPoint(maxPoint)
-{
-    bbox = this; // I probably shouldn't be doing this...
-}
-
-BoundingBox::~BoundingBox()
-{
-}
-
-bool BoundingBox::isClosestHit(
-    const Ray &ray,
-    const float &tMin,
-    float &tMax,
-    RaycastHit &hit
-)
+bool BoundingBox::isClosestHit(const Ray &ray, const float &tMin, float &tMax, RaycastHit &hit)
 {
     glm::vec3 tmin;
     glm::vec3 tmax;
-    glm::vec3 rayDir = ray.getDirection();
+    glm::vec3 rayDir = ray.direction;
     glm::vec3 invDir(
         1.0f / rayDir[0],
         1.0f / rayDir[1],
@@ -31,13 +14,13 @@ bool BoundingBox::isClosestHit(
     {
         if (rayDir[i] < 0.0f)
         {
-            tmin[i] = (maxPoint[i] - ray.getOrigin()[i]) * invDir[i];
-            tmax[i] = (minPoint[i] - ray.getOrigin()[i]) * invDir[i];
+            tmin[i] = (maxPoint[i] - ray.origin[i]) * invDir[i];
+            tmax[i] = (minPoint[i] - ray.origin[i]) * invDir[i];
         }
         else
         {
-            tmin[i] = (minPoint[i] - ray.getOrigin()[i]) * invDir[i];
-            tmax[i] = (maxPoint[i] - ray.getOrigin()[i]) * invDir[i];
+            tmin[i] = (minPoint[i] - ray.origin[i]) * invDir[i];
+            tmax[i] = (maxPoint[i] - ray.origin[i]) * invDir[i];
         }
     }
 
