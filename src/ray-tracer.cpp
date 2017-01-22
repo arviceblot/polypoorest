@@ -58,75 +58,65 @@ int main(int argc, char* argv[])
     std::cout << "Building BVH..." << std::endl;
     scene->buildBVH();
 
-    if (args.rasterize)
-    {
-        // use the rasterizer lol
-        std::cout << "Rasterizing..." << std::endl;
+    // allocate image
+    float* image = new float[3 * w * h];
 
-        scene->rasterize(&imData);
+    ThreadData* threadData = new ThreadData(image, scene);
+
+    // figure out num threads
+    if (args.numCpus == -1)
+    {
+        threadData->numCpus = boost::thread::hardware_concurrency();
     }
     else
     {
-        // use the ray-tracer
-        // figure out num threads
-        float* image = new float[3 * w * h];
-        ThreadData* threadData = new ThreadData(image, scene);
-        if (args.numCpus == -1)
-        {
-            threadData->numCpus = boost::thread::hardware_concurrency();
-        }
-        else
-        {
-            threadData->numCpus = args.numCpus;
-        }
-        threadData->w = w;
-        threadData->end = w * h;
-        threadData->index = threadData->numCpus - 1;
-
-        const int threads = threadData->numCpus;
-        std::cout << "Threads: " << threads << std::endl;
-
-        // store threads here
-        std::vector<boost::thread*> activatedThreads(threads);
-
-        // create ray-tracing threads
-        std::cout << "Creating threads..." << std::endl;
-        for (int i = 0; i < threads; i++)
-        {
-            RenderWorkerThread rwt(threadData, i);
-            activatedThreads[i] = new boost::thread(rwt);
-        }
-
-        RenderWindow window(threadData->image, args.width, args.height);
-        window.run();
-
-        // wait for threads to finish
-        std::cout << "Rendering..." << std::endl;
-        for (int i = 0; i < threads; i++)
-        {
-            activatedThreads[i]->join();
-        }
-
-        // move the color buff to the image data
-        for (int x = 0; x < w; x++)
-        {
-            for (int y = 0; y < h; y++)
-            {
-                imData[y][x] = png::rgb_pixel(
-                                   static_cast<int>(std::floor(threadData->image[(x + y * w) * 3] * 255)),
-                                   static_cast<int>(std::floor(threadData->image[1 + (x + y * w) * 3] * 255)),
-                                   static_cast<int>(std::floor(threadData->image[2 + (x + y * w) * 3] * 255))
-                               );
-            }
-        }
-
-        delete threadData;
-        delete [] image;
+        threadData->numCpus = args.numCpus;
     }
 
+    threadData->w = w;
+    threadData->end = w * h;
+    threadData->index = threadData->numCpus - 2;
+
+    const int threads = threadData->numCpus + 1; // one more for render window
+    std::cout << "Threads: " << threads << std::endl;
+
+    // store threads here
+    boost::thread *activatedThreads[threads];
+
+    // create ray-tracing threads
+    std::cout << "Creating threads..." << std::endl;
+    for (int i = 0; i < threads - 1; i++)
+    {
+        RenderWorkerThread rwt(threadData, i);
+        activatedThreads[i] = new boost::thread(rwt);
+    }
+
+    std::cout << "Creating render window..." << std::endl;
+    RenderWindow window("polypoorest", threadData->image, args.width, args.height);
+    activatedThreads[threads - 1] = new boost::thread(window);
+
+    // wait for threads to finish
+    std::cout << "Rendering..." << std::endl;
+    for (int i = 0; i < threads - 1; i++)
+    {
+        activatedThreads[i]->join();
+    }
+
+    // move the color buff to the image data
+    for (int x = 0; x < w; x++)
+    {
+        for (int y = 0; y < h; y++)
+        {
+            imData[y][x] = png::rgb_pixel(
+                               static_cast<int>(std::floor(threadData->image[(x + y * w) * 3] * 255)),
+                               static_cast<int>(std::floor(threadData->image[1 + (x + y * w) * 3] * 255)),
+                               static_cast<int>(std::floor(threadData->image[2 + (x + y * w) * 3] * 255))
+                           );
+        }
+    }
 
     // write the file
-    std::cout << "Writing file..." << std::endl;
+    std::cout << "Writing file... ";
     if (args.outputFileName != "")
     {
         imData.write(args.outputFileName);
@@ -138,7 +128,14 @@ int main(int argc, char* argv[])
         imData.write(s.str());
     }
 
-    std::cout << "Finished" << std::endl;
-//    delete scene;
+    std::cout << "finished" << std::endl;
+
+    // wait for render window close
+    std::cout << "Awaiting window close..." << std::endl;
+    activatedThreads[threads - 1]->join();
+
+    delete threadData;
+    delete [] image;
+
     exit(EXIT_SUCCESS);
 }

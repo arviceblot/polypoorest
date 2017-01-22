@@ -5,7 +5,7 @@
 #include "Shape.h"
 
 /**
- * This struct should contain all the information we need for shading operations.
+ * This class should contain all the information we need for shading operations.
  * To do this we need to know:
  *   What was hit
  *   How it was hit
@@ -16,11 +16,11 @@
  *   Pointer to object that was intersected
  *   Pointer to shader that should be used
  */
-struct RaycastHit
+class RaycastHit
 {
-    RaycastHit() {}
-    RaycastHit(float &t, const glm::vec3 &normal, Shape *shape, Shader *shader)
-        : t(t), normal(normal), shape(shape), shader(shader) {}
+public:
+    RaycastHit();
+    RaycastHit(float &t, const glm::vec3 &normal, Shape *shape, Shader *shader);
 
     float t;
     /* The normal of the surface the ray hit. */
@@ -31,3 +31,8 @@ struct RaycastHit
     Shape *shape;
     Shader *shader;
 };
+
+inline RaycastHit::RaycastHit() {}
+
+inline RaycastHit::RaycastHit(float &t, const glm::vec3 &normal, Shape *shape, Shader *shader)
+    : t(t), normal(normal), shape(shape), shader(shader) {}

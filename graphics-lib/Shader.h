@@ -7,7 +7,7 @@
 
 // forward declaration
 class Scene;
-struct RaycastHit;
+class RaycastHit;
 
 class Shader : public SceneElement
 {

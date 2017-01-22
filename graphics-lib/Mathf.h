@@ -1,7 +1,6 @@
 #pragma once
 
 #include <cmath>
-#include <chrono>
 #include <limits>
 #include <random>
 
@@ -17,19 +16,26 @@ struct Mathf
 
     static bool Approximately(const float &a, const float &b);
 
-    static float Random(const float &a = 0.0f, const float &b = 1.0f);
+    static float Random();
+    static float Random(const float &a, const float &b);
 
     static glm::vec3 UniformSampleHemisphere();
 
 private:
     static std::random_device rd;
     static std::mt19937 gen;
+    static std::uniform_real_distribution<float> mainDis;
 };
 
 
 inline bool Mathf::Approximately(const float &a, const float &b)
 {
     return (std::abs(a - b) < Epsilon);
+}
+
+inline float Mathf::Random()
+{
+    return mainDis(gen);
 }
 
 inline float Mathf::Random(const float &a, const float &b)

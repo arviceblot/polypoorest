@@ -1,22 +1,19 @@
 #include "RenderWindow.h"
 
-RenderWindow::RenderWindow(float *image, const int width, const int height)
-    : width(width), height(height),
-      image(image)
+RenderWindow::RenderWindow(const std::string &windowName, float *image, const int width, const int height)
+    : width(width), height(height), image(image)
 {
     // Create the main window using the width and height parameters from
     // our command line arguments.
-    window = new sf::RenderWindow(sf::VideoMode(width, height, 32), "Render");
+    window = new sf::RenderWindow(sf::VideoMode(width, height, 32), windowName);
+    window->setFramerateLimit(60);
+
     texture.create(width, height);
     sprite = sf::Sprite(texture);
     pixels = new std::uint8_t[4 * width * height];
 }
 
-RenderWindow::~RenderWindow()
-{
-}
-
-void RenderWindow::run()
+void RenderWindow::operator()()
 {
     // Start rendering loop
     while (window->isOpen())
@@ -41,7 +38,9 @@ void RenderWindow::run()
         // Set the active window before using OpenGL commands
         // It's useless here because active window is always the same,
         // but don't forget it if you use multiple windows or controls
-        window->setActive();
+        //window->setActive();
+
+        window->clear();
 
         // update pixels from thread data image
         for (int x = 0; x < width; x++)

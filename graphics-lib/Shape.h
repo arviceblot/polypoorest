@@ -7,7 +7,7 @@
 #include "SceneElement.h"
 #include "Shader.h"
 
-struct RaycastHit;
+class RaycastHit;
 class BoundingBox;
 class Triangle;
 

@@ -12,6 +12,8 @@ std::random_device Mathf::rd;
 
 std::mt19937 Mathf::gen(Mathf::rd());
 
+std::uniform_real_distribution<float> Mathf::mainDis(0.0f, 1.0f);
+
 glm::vec3 Mathf::UniformSampleHemisphere()
 {
     auto r1 = Random();
