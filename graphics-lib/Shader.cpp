@@ -5,10 +5,6 @@
 #include "Mathf.h"
 #include "Scene.h"
 
-Shader::~Shader()
-{
-}
-
 glm::vec3 Shader::apply(Scene *scene, RaycastHit &hit, int depth)
 {
     glm::vec3 c = glm::vec3(0.0f);
@@ -43,7 +39,7 @@ glm::vec3 Shader::apply(Scene *scene, RaycastHit &hit, int depth)
     return c;
 }
 
-void Shader::perLightOperation(Scene *scene, Light *light, RaycastHit & hit, int depth, glm::vec3 &color)
+void Shader::perLightOperation(Scene *scene, std::shared_ptr<Light> light, RaycastHit & hit, int depth, glm::vec3 &color)
 {
 }
 

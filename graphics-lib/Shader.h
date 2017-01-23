@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <string>
 #include <glm/vec3.hpp>
 #include "Light.h"
@@ -13,7 +14,6 @@ class Shader : public SceneElement
 {
 public:
     Shader(const std::string &name, const std::string &type, const glm::vec3 &diffuse = glm::vec3(0.0f));
-    virtual ~Shader() = 0;
 
     glm::vec3 apply(Scene *scene, RaycastHit &hit, int depth);
 
@@ -21,7 +21,7 @@ public:
 
 protected:
     /** This should be implemented by child classes. */
-    virtual void perLightOperation(Scene *scene, Light *light, RaycastHit & hit, int depth, glm::vec3 &color) = 0;
+    virtual void perLightOperation(Scene *scene, std::shared_ptr<Light> light, RaycastHit & hit, int depth, glm::vec3 &color) = 0;
     virtual void postLightingOperation(Scene *scene, RaycastHit & hit, int depth, glm::vec3 &color) = 0;
 
     glm::vec3 diffuse;

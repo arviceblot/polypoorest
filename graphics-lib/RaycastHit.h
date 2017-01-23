@@ -20,7 +20,7 @@ class RaycastHit
 {
 public:
     RaycastHit();
-    RaycastHit(float &t, const glm::vec3 &normal, Shape *shape, Shader *shader);
+    RaycastHit(float &t, const glm::vec3 &normal, std::shared_ptr<Shape> shape, std::shared_ptr<Shader> shader);
 
     float t;
     /* The normal of the surface the ray hit. */
@@ -28,11 +28,11 @@ public:
     /* The impact point in world space where the ray hit. */
     glm::vec3 point;
     glm::vec3 sourceRayDir;
-    Shape *shape;
-    Shader *shader;
+    std::shared_ptr<Shape> shape;
+    std::shared_ptr<Shader> shader;
 };
 
 inline RaycastHit::RaycastHit() {}
 
-inline RaycastHit::RaycastHit(float &t, const glm::vec3 &normal, Shape *shape, Shader *shader)
+inline RaycastHit::RaycastHit(float &t, const glm::vec3 &normal, std::shared_ptr<Shape> shape, std::shared_ptr<Shader> shader)
     : t(t), normal(normal), shape(shape), shader(shader) {}

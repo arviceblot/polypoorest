@@ -1,19 +1,19 @@
 #include "Triangle.h"
 #include <glm/glm.hpp>
 #include "BoundingBox.h"
+#include "BBoxFactory.h"
 #include "RaycastHit.h"
 
-Triangle::Triangle(
-    const std::string &name, const std::string &type,
-    Shader *shaderRef, const glm::vec3 &a,
-    const glm::vec3 &b, const glm::vec3 &c)
+Triangle::Triangle(const std::string &name,
+                   const std::string &type,
+                   std::shared_ptr<Shader> shaderRef,
+                   const glm::vec3 &a,
+                   const glm::vec3 &b,
+                   const glm::vec3 &c)
     : Shape(name, type, shaderRef), A(a), B(b), C(c)
 {
-    // add this triangle to the vector of triangles
-    triangles.push_back(this);
-
     // build the bounding box
-    bbox = new BoundingBox();
+    bbox = BBoxFactory::Create();
     bbox->addVertex(A);
     bbox->addVertex(B);
     bbox->addVertex(C);
@@ -86,7 +86,7 @@ bool Triangle::isClosestHit(const Ray &ray, const float &tMin, float &tMax, Rayc
     // set hit struct properties
     hit.normal = surfaceNormal;
     hit.point = p;
-    hit.shape = this;
+    hit.shape = shared_from_this();
     hit.shader = shaderRef;
     hit.sourceRayDir = ray.direction;
 

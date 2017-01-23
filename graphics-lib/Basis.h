@@ -7,7 +7,6 @@ class Basis
 public:
     Basis();
     Basis(const glm::vec3 &gaze, const glm::vec3 &b = glm::vec3(0.0f, 1.0f, 0.0f));
-    virtual ~Basis();
 
     const glm::vec3 & getU() const;
     const glm::vec3 & getV() const;
@@ -25,8 +24,6 @@ protected:
 
 inline Basis::Basis()
     : u(1.0f, 0.0f, 0.0f), v(0.0f, 1.0f, 0.0f), w(0.0f, 0.0f, 1.0f) {}
-
-inline Basis::~Basis() {}
 
 inline const glm::vec3 & Basis::getU() const
 {

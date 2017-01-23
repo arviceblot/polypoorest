@@ -5,31 +5,31 @@
 class BVHNode : public Shape
 {
 public:
-    BVHNode(std::vector<Shape *> shapes, int axis);
-    virtual ~BVHNode();
+    BVHNode(std::vector<std::shared_ptr<Shape>> shapes, int axis);
 
-    virtual bool isClosestHit(
-        const Ray &ray,
-        const float &tMin,
-        float &tMax,
-        RaycastHit &hit
-    );
+    virtual bool isClosestHit(const Ray &ray, const float &tMin, float &tMax, RaycastHit &hit);
 
-    inline const Shape * getLeftChild() const
-    {
-        return leftChild;
-    }
-    inline const Shape * getRightChild() const
-    {
-        return rightChild;
-    }
+    inline const std::shared_ptr<Shape> getLeftChild() const;
+
+    inline const std::shared_ptr<Shape> getRightChild() const;
 
 protected:
-    Shape *leftChild;
-    Shape *rightChild;
+    std::shared_ptr<Shape> leftChild;
+    std::shared_ptr<Shape> rightChild;
     int axis;
 
 private:
-    std::vector<Shape *> mergeSort(std::vector<Shape *> &vec);
-    std::vector<Shape *> merge(const std::vector<Shape *> &left, const std::vector<Shape *> &right);
+    std::vector<std::shared_ptr<Shape>> mergeSort(std::vector<std::shared_ptr<Shape>> &vec);
+
+    std::vector<std::shared_ptr<Shape>> merge(const std::vector<std::shared_ptr<Shape>> &left, const std::vector<std::shared_ptr<Shape>> &right);
 };
+
+inline const std::shared_ptr<Shape> BVHNode::getLeftChild() const
+{
+    return leftChild;
+}
+
+inline const std::shared_ptr<Shape> BVHNode::getRightChild() const
+{
+    return rightChild;
+}

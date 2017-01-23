@@ -15,7 +15,7 @@ public:
     virtual ~LambertianShader();
 
 protected:
-    virtual void perLightOperation(Scene *scene, Light *light, RaycastHit &hit, int depth, glm::vec3 &color);
+    virtual void perLightOperation(Scene *scene, std::shared_ptr<Light> light, RaycastHit &hit, int depth, glm::vec3 &color);
     virtual void postLightingOperation(Scene *scene, RaycastHit & hit, int depth, glm::vec3 &color);
 
     float mirrorCoefficient;

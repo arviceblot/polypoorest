@@ -10,48 +10,27 @@
 class Camera : public SceneElement
 {
 public:
-    Camera(
-        const std::string &name,
-        const std::string &type,
-        const glm::vec3 &position,
-        const glm::vec3 &viewDir,
-        const float &focalLength,
-        const float &imagePlaneWidth,
-        const float &aspectRatio
-    ) : SceneElement(name, type, SceneElement::Type::CAMERA),
-        position(position), basis(viewDir), focalLength(focalLength),
-        imagePlaneWidth(imagePlaneWidth), aspectRatio(aspectRatio) {}
-    virtual ~Camera() = 0;
+    Camera(const std::string &name,
+           const std::string &type,
+           const glm::vec3 &position,
+           const glm::vec3 &viewDir,
+           const float &focalLength,
+           const float &imagePlaneWidth,
+           const float &aspectRatio);
 
-    inline const Basis & getBasis() const
-    {
-        return basis;
-    }
-    inline const glm::vec3 & getPosition() const
-    {
-        return position;
-    }
-    inline const glm::vec2 & getSize() const
-    {
-        return size;
-    }
-    inline const float & getFocalLength() const
-    {
-        return focalLength;
-    }
-    inline const float & getImagePlaneWidth() const
-    {
-        return imagePlaneWidth;
-    }
-    inline const float & getAspectRatio() const
-    {
-        return aspectRatio;
-    }
+    inline const Basis & getBasis() const;
 
-    inline void setSize(const glm::vec2 &newSize)
-    {
-        size = newSize;
-    }
+    inline const glm::vec3 & getPosition() const;
+
+    inline const glm::vec2 & getSize() const;
+
+    inline const float & getFocalLength() const;
+
+    inline const float & getImagePlaneWidth() const;
+
+    inline const float & getAspectRatio() const;
+
+    inline void setSize(const glm::vec2 &newSize);
 
     virtual void computeRay(Ray &r, float i, float j) = 0;
 
@@ -66,3 +45,49 @@ protected:
 private:
     Camera();
 };
+
+inline Camera::Camera(const std::string &name,
+                      const std::string &type,
+                      const glm::vec3 &position,
+                      const glm::vec3 &viewDir,
+                      const float &focalLength,
+                      const float &imagePlaneWidth,
+                      const float &aspectRatio)
+    : SceneElement(name, type, SceneElement::Type::CAMERA),
+      position(position), basis(viewDir), focalLength(focalLength),
+      imagePlaneWidth(imagePlaneWidth), aspectRatio(aspectRatio) {}
+
+inline const Basis & Camera::getBasis() const
+{
+    return basis;
+}
+
+inline const glm::vec3 & Camera::getPosition() const
+{
+    return position;
+}
+
+inline const glm::vec2 & Camera::getSize() const
+{
+    return size;
+}
+
+inline const float & Camera::getFocalLength() const
+{
+    return focalLength;
+}
+
+inline const float & Camera::getImagePlaneWidth() const
+{
+    return imagePlaneWidth;
+}
+
+inline const float & Camera::getAspectRatio() const
+{
+    return aspectRatio;
+}
+
+inline void Camera::setSize(const glm::vec2 &newSize)
+{
+    size = newSize;
+}

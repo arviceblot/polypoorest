@@ -7,7 +7,7 @@
 #include "Scene.h"
 #include "Mathf.h"
 
-void BlinnPhongShader::perLightOperation(Scene *scene, Light *light, RaycastHit &hit, int depth, glm::vec3 &c)
+void BlinnPhongShader::perLightOperation(Scene *scene, std::shared_ptr<Light> light, RaycastHit &hit, int depth, glm::vec3 &color)
 {
     // generate shadow ray s to light from hit structure
     // Note: this is L in our equation
@@ -23,8 +23,8 @@ void BlinnPhongShader::perLightOperation(Scene *scene, Light *light, RaycastHit 
         // bisector between l and v
         glm::vec3 h = (v + shadowRay.direction) / glm::length(v + shadowRay.direction);
 
-        c += (diffuse * light->getIntensity() * std::max(0.0f, glm::dot(hit.normal, shadowRay.direction)))
-             + (specular * light->getIntensity() * std::pow(std::max(0.0f, glm::dot(hit.normal, h)), phongExponent));
+        color += (diffuse * light->getIntensity() * std::max(0.0f, glm::dot(hit.normal, shadowRay.direction)))
+                 + (specular * light->getIntensity() * std::pow(std::max(0.0f, glm::dot(hit.normal, h)), phongExponent));
     }
 }
 

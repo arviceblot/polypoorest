@@ -33,14 +33,20 @@ int main(int argc, char* argv[])
     const int h = args.height;
     png::image<png::rgb_pixel> imData(w, h);
     XMLSceneParser xmlScene;
-    Scene *scene = new Scene(&args);
+    auto scene = std::make_shared<Scene>(&args);
 
     // register object creation function with xlmScene
-    xmlScene.registerCallback("camera", new CameraCreator(scene));
-    xmlScene.registerCallback("light", new LightCreator(scene)); // let there be light
-    xmlScene.registerCallback("shader", new ShaderCreator(scene));
-    xmlScene.registerCallback("shape", new ShapeCreator(scene));
-    xmlScene.registerCallback("instance", new ShapeCreator(scene));
+    auto cameraCreator = std::make_shared<CameraCreator>(scene.get());
+    auto lightCreator = std::make_shared<LightCreator>(scene.get());
+    auto shaderCreator = std::make_shared<ShaderCreator>(scene.get());
+    auto shapeCreator = std::make_shared<ShapeCreator>(scene.get());
+    auto instanceCreator = std::make_shared<ShapeCreator>(scene.get());
+
+    xmlScene.registerCallback("camera", cameraCreator.get());
+    xmlScene.registerCallback("light", lightCreator.get()); // let there be light
+    xmlScene.registerCallback("shader", shaderCreator.get());
+    xmlScene.registerCallback("shape", shapeCreator.get());
+    xmlScene.registerCallback("instance", instanceCreator.get());
 
     // parse the scene
     if (args.inputFileName != "")
@@ -61,7 +67,7 @@ int main(int argc, char* argv[])
     // allocate image
     float* image = new float[3 * w * h];
 
-    ThreadData* threadData = new ThreadData(image, scene);
+    ThreadData* threadData = new ThreadData(image, scene.get());
 
     // figure out num threads
     if (args.numCpus == -1)

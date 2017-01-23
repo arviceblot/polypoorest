@@ -66,7 +66,7 @@ void BoundingBox::addVertex(const glm::vec3 &vertex)
     }
 }
 
-void BoundingBox::merge(const BoundingBox *other)
+void BoundingBox::merge(const std::shared_ptr<BoundingBox> other)
 {
     addVertex(other->minPoint);
     addVertex(other->maxPoint);

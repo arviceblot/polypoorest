@@ -1,41 +1,28 @@
 #include "ImplicitSphere.h"
+
 #include <algorithm>
 #include <cmath>
 #include <iostream>
+
 #include <glm/glm.hpp>
+
 #include "BoundingBox.h"
+#include "BBoxFactory.h"
 #include "RaycastHit.h"
 #include "Triangle.h"
 
-ImplicitSphere::ImplicitSphere(
-    const std::string &name,
-    const std::string &type,
-    Shader *shaderRef,
-    const glm::vec3 &center,
-    float radius
-) : Shape(name, type, shaderRef), center(center), radius(radius)
+ImplicitSphere::ImplicitSphere(const std::string &name,
+                               const std::string &type,
+                               std::shared_ptr<Shader> shaderRef,
+                               const glm::vec3 &center,
+                               float radius)
+    : Shape(name, type, shaderRef), center(center), radius(radius)
 {
     glm::vec3 minPoint = center - glm::vec3(radius);
     glm::vec3 maxPoint = center + glm::vec3(radius);
 
     // create the bounding box
-    bbox = new BoundingBox(minPoint, maxPoint);
-}
-
-ImplicitSphere::~ImplicitSphere()
-{
-    // delete all the triangles
-    if (!triangles.empty())
-    {
-        for (std::vector<Triangle*>::iterator it = triangles.begin(); it != triangles.end();)
-        {
-            delete (*it);
-            it = triangles.erase(it);
-        }
-    }
-
-    verticies.clear();
-    delete bbox;
+    bbox = BBoxFactory::Create(minPoint, maxPoint);
 }
 
 bool ImplicitSphere::isClosestHit(const Ray &ray, const float &tMin, float &tMax, RaycastHit &hit)
@@ -72,7 +59,7 @@ bool ImplicitSphere::isClosestHit(const Ray &ray, const float &tMin, float &tMax
             // set the hit structure properties
             hit.normal = surfaceNormal;
             hit.point = p;
-            hit.shape = this;
+            hit.shape = shared_from_this();
             hit.shader = shaderRef;
             hit.sourceRayDir = ray.direction;
 

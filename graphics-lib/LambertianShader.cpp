@@ -6,7 +6,7 @@
 #include "Scene.h"
 #include "Mathf.h"
 
-void LambertianShader::perLightOperation(Scene *scene, Light *light, RaycastHit &hit, int depth, glm::vec3 &color)
+void LambertianShader::perLightOperation(Scene *scene, std::shared_ptr<Light> light, RaycastHit &hit, int depth, glm::vec3 &color)
 {
     // generate shadow ray s to light from hit structure
     auto direction = glm::normalize(light->getPosition() - hit.point);

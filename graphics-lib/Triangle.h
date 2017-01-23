@@ -3,25 +3,19 @@
 #include <glm/vec3.hpp>
 #include "Shape.h"
 
-class Triangle : public Shape
+class Triangle : public Shape, public std::enable_shared_from_this<Triangle>
 {
 public:
-    Triangle(
-        const std::string &name,
-        const std::string &type,
-        Shader *shaderRef,
-        const glm::vec3 &a = glm::vec3(0.0f),
-        const glm::vec3 &b = glm::vec3(0.0f),
-        const glm::vec3 &c = glm::vec3(0.0f)
-    );
-    virtual ~Triangle();
+    Triangle(const std::string &name,
+             const std::string &type,
+             std::shared_ptr<Shader> shaderRef,
+             const glm::vec3 &a = glm::vec3(0.0f),
+             const glm::vec3 &b = glm::vec3(0.0f),
+             const glm::vec3 &c = glm::vec3(0.0f));
 
-    virtual bool isClosestHit(
-        const Ray& ray,
-        const float& tMin,
-        float& tMax,
-        RaycastHit& hit
-    );
+    virtual bool isClosestHit(const Ray& ray, const float& tMin, float& tMax, RaycastHit& hit);
+
+    void finalize();
 
     const glm::vec3 & getSurfaceNormal() const;
 
@@ -32,10 +26,10 @@ protected:
     glm::vec3 surfaceNormal;
 };
 
-inline Triangle::~Triangle()
+inline void Triangle::finalize()
 {
-    verticies.clear();
-    delete bbox;
+    // add this triangle to the vector of triangles
+    triangles.push_back(shared_from_this());
 }
 
 inline const glm::vec3 & Triangle::getSurfaceNormal() const

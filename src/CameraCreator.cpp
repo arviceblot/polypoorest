@@ -20,7 +20,7 @@ void CameraCreator::instance(const ptree::value_type& v)
     glm::vec3 lookatPoint;
     bool lookatSet = false;
     float focalLength, imagePlaneWidth;
-    SceneElement *e = NULL;
+    std::shared_ptr<Camera> e = NULL;
 
     name = v.second.get<std::string>("<xmlattr>.name");
     type = v.second.get<std::string>("<xmlattr>.type");
@@ -67,7 +67,7 @@ void CameraCreator::instance(const ptree::value_type& v)
     // TODO: Add orthographic camera option here
     if (type == "perspective")
     {
-        e = new PerspectiveCamera(name, type, position, viewDir, focalLength, imagePlaneWidth);
+        e = std::make_shared<PerspectiveCamera>(name, type, position, viewDir, focalLength, imagePlaneWidth);
     }
     scene->add(e);
     std::cout << "finished." << std::endl;

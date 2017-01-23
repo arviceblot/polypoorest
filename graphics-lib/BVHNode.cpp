@@ -1,14 +1,15 @@
 #include "BVHNode.h"
+
 #include <cstdlib>
+
 #include "BoundingBox.h"
+#include "BBoxFactory.h"
 #include "RaycastHit.h"
 
-BVHNode::BVHNode(
-    std::vector<Shape *> shapes,
-    int axis
-) : Shape("", "", NULL), axis(axis)
+BVHNode::BVHNode(std::vector<std::shared_ptr<Shape>> shapes, int axis)
+    : Shape("", "", NULL), axis(axis)
 {
-    bbox = new BoundingBox();
+    bbox = BBoxFactory::Create();
 
     if (shapes.size() == 1)
     {
@@ -28,37 +29,20 @@ BVHNode::BVHNode(
         // sort and split
         shapes = mergeSort(shapes);
 
-        std::vector<Shape*>::iterator middle = shapes.begin() + (shapes.size() / 2);
+        auto middle = shapes.begin() + (shapes.size() / 2);
 
-        std::vector<Shape *> left(shapes.begin(), middle);
-        std::vector<Shape *> right(middle, shapes.end());
+        std::vector<std::shared_ptr<Shape>> left(shapes.begin(), middle);
+        std::vector<std::shared_ptr<Shape>> right(middle, shapes.end());
 
-        leftChild = new BVHNode(left, (axis + 1) % 3);
-        rightChild = new BVHNode(right, (axis + 1) % 3);
+        leftChild = std::make_shared<BVHNode>(left, (axis + 1) % 3);
+        rightChild = std::make_shared<BVHNode>(right, (axis + 1) % 3);
 
         bbox->merge(leftChild->getBoundingBox());
         bbox->merge(rightChild->getBoundingBox());
     }
 }
 
-BVHNode::~BVHNode()
-{
-    delete bbox;
-    if (leftChild != NULL)
-    {
-        delete leftChild;
-    }
-    if (rightChild != NULL)
-    {
-        delete rightChild;
-    }
-}
-
-bool BVHNode::isClosestHit(
-    const Ray &ray,
-    const float &tMin,
-    float &tMax,
-    RaycastHit &hit)
+bool BVHNode::isClosestHit(const Ray &ray, const float &tMin, float &tMax, RaycastHit &hit)
 {
     if (bbox->isClosestHit(ray, tMin, tMax, hit))
     {
@@ -115,17 +99,17 @@ bool BVHNode::isClosestHit(
 /**
  * https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Merge_sort#C.2B.2B
  */
-std::vector<Shape *> BVHNode::mergeSort(std::vector<Shape *> &vec)
+std::vector<std::shared_ptr<Shape>> BVHNode::mergeSort(std::vector<std::shared_ptr<Shape>> &vec)
 {
     if (vec.size() == 1)
     {
         return vec;
     }
 
-    std::vector<Shape *>::iterator middle = vec.begin() + (vec.size() / 2);
+    auto middle = vec.begin() + (vec.size() / 2);
 
-    std::vector<Shape *> left(vec.begin(), middle);
-    std::vector<Shape *> right(middle, vec.end());
+    std::vector<std::shared_ptr<Shape>> left(vec.begin(), middle);
+    std::vector<std::shared_ptr<Shape>> right(middle, vec.end());
 
     left = mergeSort(left);
     right = mergeSort(right);
@@ -136,9 +120,9 @@ std::vector<Shape *> BVHNode::mergeSort(std::vector<Shape *> &vec)
 /**
  * https://en.wikibooks.org/wiki/Algorithm_Implementation/Sorting/Merge_sort#C.2B.2B
  */
-std::vector<Shape *> BVHNode::merge(const std::vector<Shape *> &left, const std::vector<Shape *> &right)
+std::vector<std::shared_ptr<Shape>> BVHNode::merge(const std::vector<std::shared_ptr<Shape>> &left, const std::vector<std::shared_ptr<Shape>> &right)
 {
-    std::vector<Shape *> result;
+    std::vector<std::shared_ptr<Shape>> result;
     unsigned lit = 0;
     unsigned rit = 0;
 

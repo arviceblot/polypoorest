@@ -4,6 +4,7 @@ add_library(graphics-lib
     AreaLight.cpp AreaLight.h
     Basis.cpp Basis.h
     BlinnPhongShader.cpp BlinnPhongShader.h
+    BBoxFactory.h
     BoundingBox.cpp BoundingBox.h
     Box.cpp Box.h
     BVHNode.cpp BVHNode.h
@@ -24,6 +25,7 @@ add_library(graphics-lib
     Shader.cpp Shader.h
     Shape.cpp Shape.h
     Triangle.cpp Triangle.h
+    TriangleFactory.h
     )
 
 target_link_libraries(graphics-lib
